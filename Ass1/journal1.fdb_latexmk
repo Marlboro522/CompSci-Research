@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex main"] 1725236955 "main.aux" "main.bbl" "main" 1725236957
+["bibtex journal1"] 1725237237 "journal1.aux" "journal1.bbl" "journal1" 1725237239
   "/usr/local/texlive/2022/texmf-dist/bibtex/bst/base/alpha.bst" 1292289607 23907 a5f93555796fb564b924339521f10a7c ""
-  "main.aux" 1725236956 1615 309a1f9094e820b8054edb5a3ef52d30 "pdflatex"
+  "journal1.aux" 1725237239 1615 309a1f9094e820b8054edb5a3ef52d30 "pdflatex"
   "references.bib" 1725236579 2461 7a31b5c425ed87104cf1af10ff418ecf ""
   (generated)
-  "main.bbl"
-  "main.blg"
-["pdflatex"] 1725236955 "/Users/ilu/CompSci-Research/Ass1/main.tex" "main.pdf" "main" 1725236957
-  "/Users/ilu/CompSci-Research/Ass1/main.tex" 1725236954 6868 5088380f0920a1775c5211af5abb00c3 ""
+  "journal1.bbl"
+  "journal1.blg"
+["pdflatex"] 1725237238 "/Users/ilu/CompSci-Research/Ass1/journal1.tex" "journal1.pdf" "journal1" 1725237239
+  "/Users/ilu/CompSci-Research/Ass1/journal1.tex" 1725236954 6868 5088380f0920a1775c5211af5abb00c3 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -93,12 +93,12 @@
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
   "IMG_1667.JPG" 1725227753 1238327 36b26bba8f43ea9152a5d8892d8f0ff9 ""
   "Screenshot 2024-09-01 at 6.12.49 PM.png" 1725235973 192722 58108e60da8f3b21bba2cddde39482b3 ""
-  "main.aux" 1725236956 1615 309a1f9094e820b8054edb5a3ef52d30 "pdflatex"
-  "main.bbl" 1725236955 444 3f82338a19a74b8ceb7bd9d00fd57547 "bibtex main"
-  "main.out" 1725236956 321 941789f82a38579d9f390650c6700bb4 "pdflatex"
-  "main.tex" 1725236954 6868 5088380f0920a1775c5211af5abb00c3 ""
+  "journal1.aux" 1725237239 1615 309a1f9094e820b8054edb5a3ef52d30 "pdflatex"
+  "journal1.bbl" 1725237238 444 3f82338a19a74b8ceb7bd9d00fd57547 "bibtex journal1"
+  "journal1.out" 1725237239 321 941789f82a38579d9f390650c6700bb4 "pdflatex"
+  "journal1.tex" 1725236954 6868 5088380f0920a1775c5211af5abb00c3 ""
   (generated)
-  "main.aux"
-  "main.log"
-  "main.out"
-  "main.pdf"
+  "journal1.aux"
+  "journal1.log"
+  "journal1.out"
+  "journal1.pdf"
