@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.9)  7 SEP 2024 11:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.9)  6 SEP 2024 09:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/ilu/CompSci-Research/Ass1/journal.tex
-(/Users/ilu/CompSci-Research/Ass1/journal.tex
+**/Users/ilu/CompSci-Research/Ass2/journal2.tex
+(/Users/ilu/CompSci-Research/Ass2/journal2.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24> (/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -239,8 +239,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count286
 \l__pdf_internal_box=\box52
-) (./journal.aux)
-\openout1 = `journal.aux'.
+) (./journal2.aux)
+\openout1 = `journal2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
 LaTeX Font Info:    ... okay on input line 20.
@@ -333,43 +333,31 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 20.
 LaTeX Info: Redefining \pageref on input line 20.
 LaTeX Info: Redefining \nameref on input line 20.
- (./journal.out) (./journal.out)
+ (./journal2.out) (./journal2.out)
 \@outlinefile=\write3
-\openout3 = `journal.out'.
-
-<IMG_1667.JPG, id=20, 2457.18pt x 2473.24pt>
-File: IMG_1667.JPG Graphic file (type jpg)
-<use IMG_1667.JPG>
-Package pdftex.def Info: IMG_1667.JPG  used on input line 33.
-(pdftex.def)             Requested size: 110.8946pt x 111.5929pt.
-<Screenshot 2024-09-01 at 6.12.49 PM.png, id=21, 468.75125pt x 696.6025pt>
-File: Screenshot 2024-09-01 at 6.12.49 PM.png Graphic file (type png)
-<use Screenshot 2024-09-01 at 6.12.49 PM.png>
-Package pdftex.def Info: Screenshot 2024-09-01 at 6.12.49 PM.png  used on input line 43.
-(pdftex.def)             Requested size: 110.8946pt x 164.79642pt.
+\openout3 = `journal2.out'.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+No file journal2.bbl.
 [1
 
-{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./IMG_1667.JPG>] (./journal.bbl [2 <./Screenshot 2024-09-01 at 6.12.49 PM.png>]) [3] (./journal.aux)
-Package rerunfilecheck Info: File `journal.out' has not changed.
-(rerunfilecheck)             Checksum: 941789F82A38579D9F390650C6700BB4;321.
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./journal2.aux)
+Package rerunfilecheck Info: File `journal2.out' has not changed.
+(rerunfilecheck)             Checksum: DDFCD53E6A97B741D7ABEBA33FA23E4D;253.
  ) 
 Here is how much of TeX's memory you used:
- 10346 strings out of 478268
- 164114 string characters out of 5846348
- 483749 words of memory out of 5000000
- 28421 multiletter control sequences out of 15000+600000
- 475015 words of font info for 48 fonts, out of 8000000 for 9000
+ 10310 strings out of 478268
+ 163481 string characters out of 5846348
+ 485698 words of memory out of 5000000
+ 28400 multiletter control sequences out of 15000+600000
+ 473880 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,7n,63p,623b,449s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on journal.pdf (3 pages, 1448125 bytes).
+ 60i,6n,63p,624b,338s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on journal2.pdf (1 page, 57132 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
- 77 compressed objects within 1 object stream
- 12 named destinations out of 1000 (max. 500000)
- 43 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 PDF objects out of 1000 (max. 8388607)
+ 34 compressed objects within 1 object stream
+ 5 named destinations out of 1000 (max. 500000)
+ 25 words of extra memory for PDF output out of 10000 (max. 10000000)
 
