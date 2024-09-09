@@ -1,0 +1,335 @@
+@article{augustusk.uhtDisjointEagerExecution2002,
+  title = {Disjoint {{Eager Execution}}: {{What It Is}} / {{What It Is Not}}},
+  author = {{Augustus K. Uht}},
+  year = {2002},
+  month = mar,
+  journal = {ACM SIGARCH Cmputer Architecture News},
+  volume = {30},
+  number = {1},
+  pages = {12--14},
+  issn = {0163-5964},
+  doi = {10.1145/511120},
+  file = {/Users/ilu/Zotero/storage/4JXEVN7B/Augustus K. Uht - 2002 - Disjoint Eager Execution What It Is  What It Is Not.pdf}
+}
+
+@phdthesis{balasubramanianNoPenaltyControlHazard2024,
+  type = {Thesis},
+  title = {Towards {{No-Penalty Control Hazard Handling}} in {{RISC}} Architecture Microcontrollers},
+  author = {Balasubramanian, Linknath Surya},
+  year = {2024},
+  month = sep,
+  doi = {10.25394/PGS.26005459.v1},
+  urldate = {2024-09-07},
+  abstract = {Achieving higher throughput is one of the most important requirements of a modern microcontroller. It is therefore not affordable for it to waste a considerable number of clock cycles in branch mispredictions. This paper proposes a hardware mechanism that makes microcontrollers forgo branch predictors, thereby removing branch mispredictions. The scope of this work is limited to low cost microcontroller cores that are applied in embedded systems. The proposed technique is implemented as five different modules which work together to forward required operands, resolve branches without prediction, and calculate the next instruction's address in the first stage of an in-order five stage pipelined micro-architecture. Since the address of successive instruction to a control transfer instruction is calculated in the first stage of pipeline, branch prediction is no longer necessary, thereby eliminating the clock cycle penalties occurred when using a branch predictor. The designed architecture was able to successfully calculate the address of next correct instruction and fetch it without any wastage of clock cycles except in cases where control transfer instructions are in true dependence with their immediate previous instructions. Further, we synthesized the proposed design with 7nm FinFET process and compared its latency with other designs to make sure that the microcontroller's operating frequency is not degraded by using this design. The critical path latency of instruction fetch stage integrated with the proposed architecture is 307 ps excluding the instruction cache access time.},
+  langid = {english},
+  school = {Purdue University Graduate School},
+  file = {/Users/ilu/Zotero/storage/LCZWB3RU/26005459.html}
+}
+
+@misc{BranchPredictionRISCVBOOM,
+  title = {Branch {{Prediction}} --- {{RISCV-BOOM}} Documentation},
+  urldate = {2024-09-07},
+  howpublished = {https://docs.boom-core.org/en/latest/sections/branch-prediction/},
+  note = {Clear explanation aboout the BOOM Outof order RISCV core with emphasis on it's branch prediction strategy.},
+  file = {/Users/ilu/Zotero/storage/EC67QQSI/branch-prediction.html}
+}
+
+@misc{BranchPredictionUnit,
+  title = {3. {{Branch Prediction Unit}} --- {{MARSS-RISCV}} 4.1a Documentation},
+  urldate = {2024-09-07},
+  howpublished = {https://marss-riscv-docs.readthedocs.io/en/latest/sections/branch-pred.html},
+}
+
+@inproceedings{calderFastAccurateInstruction1994,
+  title = {Fast and Accurate Instruction Fetch and Branch Prediction},
+  booktitle = {Proceedings of the 21st Annual International Symposium on {{Computer}} Architecture},
+  author = {Calder, B. and Grunwald, D.},
+  year = {1994},
+  month = apr,
+  series = {{{ISCA}} '94},
+  pages = {2--11},
+  publisher = {IEEE Computer Society Press},
+  address = {Washington, DC, USA},
+  doi = {10.1145/191995.192011},
+  urldate = {2024-09-07},
+  abstract = {Accurate branch prediction is critical to performance; mispredicted branches mean that ten's of cycles may be wasted in superscalar architectures. Architectures combining very effective branch prediction mechanisms coupled with modified branch target buffers (BTB's) have been proposed for wide-issue processors. These mechanisms require considerable processor resources. Concurrently, the larger address space of 64-bit architectures introduce new obstacles and opportunities. A larger address space means branch target buffers become more expensive. In this paper, we show how a combination of less expensive mechanisms can achieve better performance than BTB's. This combination relies on a number of design choices described in the paper. We used trace-driven simulation to show that our proposed design, which uses fewer resources, offers better performance than previously proposed alternatives for most programs, and indicate how to further improve this design.},
+  isbn = {978-0-8186-5510-4},
+  file = {/Users/ilu/Zotero/storage/G5XR4KE6/Calder and Grunwald - 1994 - Fast and accurate instruction fetch and branch prediction.pdf}
+}
+
+@article{emmaCharacterizationBranchData1987,
+  title = {Characterization of Branch and Data Dependencies on Programs for Evaluating Pipeline Performance},
+  author = {Emma, P. G. and Davidson, E. S.},
+  year = {1987},
+  month = jul,
+  journal = {IEEE Trans. Comput.},
+  volume = {36},
+  number = {7},
+  pages = {859--875},
+  issn = {0018-9340},
+  doi = {10.1109/TC.1987.1676981},
+  urldate = {2024-09-07},
+  abstract = {The nature by which branches and data dependencies generate delays that degrade pipeline performance is investigated in this paper. We show that for the general execution trace, few specific delays can be considered in isolation; rather, the magnitude of any specific delay may depend on the relative proximity of other delays. This phenomenon can make the task of accurately characterizing a trace tape with simple statistics intractable. We present a set of trace reductions that facilitates this task by simplifying the corresponding data-dependency graph. The reductions operate on multiple data-dependency arcs and branches in conjunction; those arcs whose performance implications are redundant with respect to the dependency graph are identified, and eliminated from the graph. We show that the reduced graph can be accurately characterized by simple statistics. We use these statistics to show that as the length of a pipeline increases, the performance degradation due to data dependencies and branches increases monotonically. However, lengthening the pipeline may correspond to decreasing the cycle time of the pipeline. These two opposing effects are used in conjunction to derive an equation for optimal pipeline length for a given trace tape. The optimal pipeline length is shown to be characterized by n = {\textsurd}{$\gamma\alpha$} where {$\gamma$} is the ratio of overall circuit delay to latching overhead, and a is a function of the trace statistics that accounts for the delays induced by data dependencies and branches.}
+}
+
+@article{eversUsingHybridBranch1996,
+  title = {Using Hybrid Branch Predictors to Improve Branch Prediction Accuracy in the Presence of Context Switches},
+  author = {Evers, Marius and Chang, Po-Yung and Patt, Yale N.},
+  year = {1996},
+  month = may,
+  journal = {SIGARCH Comput. Archit. News},
+  volume = {24},
+  number = {2},
+  pages = {3--11},
+  issn = {0163-5964},
+  doi = {10.1145/232974.232975},
+  urldate = {2024-09-07},
+  abstract = {Pipeline stalls due to conditional branches represent one of the most significant impediments to realizing the performance potential of deeply pipelined, superscalar processors. Many branch predictors have been proposed to help alleviate this problem, including the Two-Level Adaptive Branch Predictor, and more recently, two-component hybrid branch predictors.In a less idealized environment, such as a time-shared system, code of interest involves context switches. Context switches, even at fairly large intervals, can seriously degrade the performance of many of the most accurate branch prediction schemes. In this paper, we introduce a new hybrid branch predictor and show that it is more accurate (for a given cost) than any previously published scheme, especially if the branch histories are periodically flushed due to the presence of context switches.},
+  file = {/Users/ilu/Zotero/storage/HHUIT2JJ/Evers et al. - 1996 - Using hybrid branch predictors to improve branch prediction accuracy in the presence of context swit.pdf}
+}
+
+@article{evtyushkinBranchScopeNewSideChannel2018,
+  title = {{{BranchScope}}: {{A New Side-Channel Attack}} on {{Directional Branch Predictor}}},
+  shorttitle = {{{BranchScope}}},
+  author = {Evtyushkin, Dmitry and Riley, Ryan and {Abu-Ghazaleh}, Nael CSE {and} ECE and Ponomarev, Dmitry},
+  year = {2018},
+  month = mar,
+  journal = {SIGPLAN Not.},
+  volume = {53},
+  number = {2},
+  pages = {693--707},
+  issn = {0362-1340},
+  doi = {10.1145/3296957.3173204},
+  urldate = {2024-09-07},
+  abstract = {We present BranchScope - a new side-channel attack where the attacker infers the direction of an arbitrary conditional branch instruction in a victim program by manipulating the shared directional branch predictor. The directional component of the branch predictor stores the prediction on a given branch (taken or not-taken) and is a different component from the branch target buffer (BTB) attacked by previous work. BranchScope is the first fine-grained attack on the directional branch predictor, expanding our understanding of the side channel vulnerability of the branch prediction unit. Our attack targets complex hybrid branch predictors with unknown organization. We demonstrate how an attacker can force these predictors to switch to a simple 1-level mode to simplify the direction recovery. We carry out BranchScope on several recent Intel CPUs and also demonstrate the attack against an SGX enclave.},
+  file = {/Users/ilu/Zotero/storage/GRBFLG6L/Evtyushkin et al. - 2018 - BranchScope A New Side-Channel Attack on Directional Branch Predictor.pdf}
+}
+
+@article{hartsteinOptimumPipelineDepth2002,
+  title = {The Optimum Pipeline Depth for a Microprocessor},
+  author = {Hartstein, A. and Puzak, Thomas R.},
+  year = {2002},
+  month = may,
+  journal = {SIGARCH Comput. Archit. News},
+  volume = {30},
+  number = {2},
+  pages = {7--13},
+  issn = {0163-5964},
+  doi = {10.1145/545214.545217},
+  urldate = {2024-09-07},
+  abstract = {The impact of pipeline length on the performance of a microprocessor is explored both theoretically and by simulation. An analytical theory is presented that shows two opposing architectural parameters affect the optimal pipeline length: the degree of instruction level parallelism (superscalar) decreases the optimal pipeline length, while the lack of pipeline stalls increases the optimal pipeline length. This theory is tested by analyzing the optimal pipeline length for 35 applications representing three classes of workloads. Trace tapes are collected from SPEC95 and SPEC2000 applications, traditional (legacy) database and on-line transaction processing (OLTP) applications, and modern (e. g. web) applications primarily written in Java and C++. The results show that there is a clear and significant difference in the optimal pipeline length between the SPEC workloads and both the legacy and modern applications. The SPEC applications, written in C, optimize to a shorter pipeline length than the legacy applications, largely written in assembler language, with relatively little overlap in the two distributions. Additionally, the optimal pipeline length distribution for the C++ and Java workloads overlaps with the legacy applications, suggesting similar workload characteristics. These results are explored across a wide range of superscalar processors, both in-order and out-of-order.},
+  note = {Old Paper
+\par
+Used a proprietary simulation system to simulate various versions of Pipeline for varying depths. tested mainly for SPEC benchmark suite.
+\par
+Need to study the section titled ``Theory'' more. 
+\par
+Not really sure about how the methodology can relate to the modern workloads.},
+  file = {/Users/ilu/Zotero/storage/KSAK83YC/Hartstein and Puzak - 2002 - The optimum pipeline depth for a microprocessor.pdf}
+}
+
+@inproceedings{heSurveyComparisonPipeline2023,
+  title = {Survey and {{Comparison}} of {{Pipeline}} of {{Some RISC}} and {{CISC System Architectures}}},
+  booktitle = {2023 8th {{International Conference}} on {{Computer}} and {{Communication Systems}} ({{ICCCS}})},
+  author = {He, Yan and Chen, Xiangning},
+  year = {2023},
+  month = apr,
+  pages = {785--790},
+  doi = {10.1109/ICCCS57501.2023.10150975},
+  urldate = {2024-09-07},
+  abstract = {Instruction set is a set of instructions used by CPU to calculate and control computer system, and is the interface between hardware and software. There are two common instruction sets: CISC and RISC. Pipeline technology is widely used in instruction set processor design to improve the efficiency of executing instructions. This paper introduces the difference between CISC and RISC in pipeline implementation, introduces the basic pipelining and two advanced pipelining - superscalar and superpipelining in detail, and introduces several pipelining using CISC and RISC architecture processors, including ARM, RISC-V, Longarch, and X86.},
+  keywords = {CISC,Communication systems,Computer architecture,Control systems,Pipeline,processor,Reduced instruction set computing,RISC,Software,superpipelining,superscalar,Surveys,Systems architecture},
+  note = {Compares RISC and CISC
+\par
+Super Pipelining: Two-stage super pipelined microprocessor, the task completed by each pipelined segment can be divided into two non overlapping parts and each part can be executed within half a clock cycle.},
+  file = {/Users/ilu/Zotero/storage/9G7CSFBS/He and Chen - 2023 - Survey and Comparison of Pipeline of Some RISC and CISC System Architectures.pdf;/Users/ilu/Zotero/storage/S2E84ERW/10150975.html}
+}
+
+@inproceedings{hoogerbruggeDynamicBranchPrediction2000,
+  title = {Dynamic Branch Prediction for a {{VLIW}} Processor},
+  booktitle = {Proceedings 2000 {{International Conference}} on {{Parallel Architectures}} and {{Compilation Techniques}} ({{Cat}}. {{No}}.{{PR00622}})},
+  author = {Hoogerbrugge, J.},
+  year = {2000},
+  month = oct,
+  pages = {207--214},
+  issn = {1089-795X},
+  doi = {10.1109/PACT.2000.888345},
+  urldate = {2024-09-07},
+  abstract = {This paper describes the design of a dynamic branch predictor for a VLIW processor. The developed branch predictor predicts the direction of a branch, i.e., taken or not taken, and in the case of taken prediction it also predicts the issue-slot that contains the taken branch. This information is used to perform the BTB lookup. We compare this method against a typical superscalar branch predictor and against a branch predictor developed for VLIWs by Intel and HP. For a 2K entry BHT, 512 entry BTB, gshare branch predictor we obtain a next pc misprediction rate of 7.83\%, while a traditional superscalar-type branch predictor of comparable costs achieves 10.3\% and the Intel/HP predictor achieves 9.31\%. In addition, we propose to have both predicted and delayed branches in the ISA and let the compiler select which type to apply. Simulations show performance improvements of 2-7\% for benchmarks that are well-known for their high misprediction rates. This paper also contributes an experiment to determine whether speculative update in the fetch stage and correction of mispredictions is really necessary for VLIWs, instead of updating when branches are resolved. Experiments show that the performance advantage of speculative updating is small.},
+  keywords = {Accuracy,Costs,Delay effects,Dynamic scheduling,Filling,History,Instruction sets,Laboratories,Processor scheduling,VLIW},
+  note = {Selective Branch Prediction for VLIW Processors. mixinf predicted and delayed branches yielded performance improvements.},
+  file = {/Users/ilu/Zotero/storage/IQZZGVEZ/Hoogerbrugge - 2000 - Dynamic branch prediction for a VLIW processor.pdf}
+}
+
+@techreport{johnsonBranchPredicationUsing1992,
+  type = {Technical {{Report}}},
+  title = {Branch Predication Using Large Self History},
+  author = {Johnson, John D.},
+  year = {1992},
+  month = nov,
+  address = {Stanford, CA, USA},
+  institution = {Stanford University},
+  abstract = {Branch prediction is the main method of providing speculative opportunities for new high performance processors, therefore the accuracy of branch prediction is becoming very important. Motivated by this desire to achieve high levels of branch prediction, this study examines methods of using up to 24 bits branch direction history to determine the probable outcome of the next execution of a conditional branch. Using profiling to train a prediction logic function achieves an average branch prediction accuracy of up to 96.9\% for the six benchmarks used in this study.}
+}
+
+@article{kocherSpectreAttacksExploiting2020,
+  title = {Spectre Attacks: Exploiting Speculative Execution},
+  shorttitle = {Spectre Attacks},
+  author = {Kocher, Paul and Horn, Jann and Fogh, Anders and Genkin, Daniel and Gruss, Daniel and Haas, Werner and Hamburg, Mike and Lipp, Moritz and Mangard, Stefan and Prescher, Thomas and Schwarz, Michael and Yarom, Yuval},
+  year = {2020},
+  month = jun,
+  journal = {Commun. ACM},
+  volume = {63},
+  number = {7},
+  pages = {93--101},
+  issn = {0001-0782},
+  doi = {10.1145/3399742},
+  urldate = {2024-09-07},
+  abstract = {Modern processors use branch prediction and speculative execution to maximize performance. For example, if the destination of a branch depends on a memory value that is in the process of being read, CPUs will try to guess the destination and attempt to execute ahead. When the memory value finally arrives, the CPU either discards or commits the speculative computation. Speculative logic is unfaithful in how it executes, can access the victim's memory and registers, and can perform operations with measurable side effects.Spectre attacks involve inducing a victim to speculatively perform operations that would not occur during correct program execution and which leak the victim's confidential information via a side channel to the adversary. This paper describes practical attacks that combine methodology from side-channel attacks, fault attacks, and return-oriented programming that can read arbitrary memory from the victim's process. More broadly, the paper shows that speculative execution implementations violate the security assumptions underpinning numerous software security mechanisms, such as operating system process separation, containerization, just-in-time (JIT) compilation, and countermeasures to cache timing and side-channel attacks. These attacks represent a serious threat to actual systems because vulnerable speculative execution capabilities are found in microprocessors from Intel, AMD, and ARM that are used in billions of devices.Although makeshift processor-specific countermeasures are possible in some cases, sound solutions will require fixes to processor designs as well as updates to instruction set architectures (ISAs) to give hardware architects and software developers a common understanding as to what computation state CPU implementations are (and are not) permitted to leak.},
+  file = {/Users/ilu/Zotero/storage/IGLSYLHC/Kocher et al. - 2020 - Spectre attacks exploiting speculative execution.pdf}
+}
+
+@inproceedings{koruyehSpectreReturnsSpeculation2018,
+  title = {Spectre {{Returns}}! {{Speculation Attacks}} Using the {{Return Stack Buffer}}},
+  booktitle = {12th {{USENIX Workshop}} on {{Offensive Technologies}} ({{WOOT}} 18)},
+  author = {Koruyeh, Esmaeil Mohammadian and Khasawneh, Khaled N. and Song, Chengyu and {Abu-Ghazaleh}, Nael},
+  year = {2018},
+  urldate = {2024-09-07},
+  langid = {english},
+  file = {/Users/ilu/Zotero/storage/BWNMWMHJ/Koruyeh et al. - 2018 - Spectre Returns! Speculation Attacks using the Return Stack Buffer.pdf}
+}
+
+@inproceedings{kostromitinAnalysisMostCommon2020,
+  title = {Analysis of the {{Most Common Software}} and {{Hardware Vulnerabilities}} in {{Microprocessor Systems}}},
+  booktitle = {2020 {{International Russian Automation Conference}} ({{RusAutoCon}})},
+  author = {Kostromitin, Konstantin I. and Dokuchaev, Boris N. and Kozlov, Danila A.},
+  year = {2020},
+  month = sep,
+  pages = {1031--1036},
+  doi = {10.1109/RusAutoCon49822.2020.9208037},
+  urldate = {2024-09-07},
+  abstract = {The relevance of data protection is related to the intensive informatization of various aspects of society and the need to prevent unauthorized access to them. World spending on ensuring information security (IS) for the current state: expenses in the field of IS today amount to 81.7 billion. Expenditure forecast by 2020: about 105 billion [1]. Information protection of military facilities is the most critical in the public sector, in the non-state - financial organizations is one of the leaders in spending on information protection. An example of the importance of IS research is the Trojan encoder WannaCry, which infected hundreds of thousands of computers around the world, attacks are recorded in more than 116 countries. The attack of the encoder of WannaCry (Wana Decryptor) happens through a vulnerability in service Server Message Block (protocol of network access to file systems) of Windows OS. Then, a rootkit (a set of malware) was installed on the infected system, using which the attackers launched an encryption program. Then each vulnerable computer could become infected with another infected device within one local network. Due to these attacks, about \$70,000 was lost (according to data from 18.05.2017) [2]. It is assumed in the presented work, that the software level of information protection is fundamentally insufficient to ensure the stable functioning of critical objects. This is due to the possible hardware implementation of undocumented instructions, discussed later. The complexity of computing systems and the degree of integration of their components are constantly growing. Therefore, monitoring the operation of the computer hardware is necessary to achieve the maximum degree of protection, in particular, data processing methods.},
+  keywords = {Computers,Hardware,hardware algorithm protection,hardware vulnerabilities,local computer calculation network,Production,Program processors,remote attack,Silicon,Transistors},
+  file = {/Users/ilu/Zotero/storage/WBKU9A77/Kostromitin et al. - 2020 - Analysis of the Most Common Software and Hardware Vulnerabilities in Microprocessor Systems.pdf}
+}
+
+@article{laljaReducingBranchPenalty1988,
+  title = {Reducing the Branch Penalty in Pipelined Processors},
+  author = {Lalja, D. J.},
+  year = {1988},
+  month = jul,
+  journal = {Computer},
+  volume = {21},
+  number = {7},
+  pages = {47--55},
+  issn = {1558-0814},
+  doi = {10.1109/2.68},
+  urldate = {2024-09-07},
+  abstract = {A probabilistic model is developed to quantify the performance effects of the branch penalty in a typical pipeline. The branch penalty is analyzed as a function of the relative number of branch instructions executed and the probability that a branch is taken. The resulting model shows the fraction of maximum performance achievable under the given conditions. Techniques to reduce the branch penalty include static and dynamic branch prediction, the branch target buffer, the delayed branch, branch bypassing and multiple prefetching, branch folding, resolution of branch decision early in the pipeline, using multiple independent instruction streams in a shared pipeline, and the prepare-to-branch instruction.{$<>$}},
+  keywords = {Algorithms,Computer aided instruction,Counting circuits,Data structures,Delay,Indexing,Performance analysis,Pipelines,Prefetching,Testing},
+  note = {``Branch bypass and multiple prefetch'' ~this is what you are thinking along with multiple decode units. Read more about this as this contains some methods to quantify such hypothetical machines.},
+  file = {/Users/ilu/Zotero/storage/P2C2JG27/Lalja - 1988 - Reducing the branch penalty in pipelined processors.pdf}
+}
+
+@inproceedings{liConditionalSpeculationEffective2019,
+  title = {Conditional {{Speculation}}: {{An Effective Approach}} to {{Safeguard Out-of-Order Execution Against Spectre Attacks}}},
+  shorttitle = {Conditional {{Speculation}}},
+  booktitle = {2019 {{IEEE International Symposium}} on {{High Performance Computer Architecture}} ({{HPCA}})},
+  author = {Li, Peinan and Zhao, Lutan and Hou, Rui and Zhang, Lixin and Meng, Dan},
+  year = {2019},
+  month = feb,
+  pages = {264--276},
+  issn = {2378-203X},
+  doi = {10.1109/HPCA.2019.00043},
+  urldate = {2024-09-07},
+  abstract = {Speculative execution side-channel vulnerabilities such as Spectre reveal that conventional architecture designs lack security consideration. This paper proposes a software transparent defense mechanism, named as Conditional Speculation, against Spectre vulnerabilities found on traditional out-of-order microprocessors. It introduces the concept of security dependence to mark speculative memory instructions which could leak information with potential security risk. More specifically, security-dependent instructions are detected and marked with suspect speculation flags in the Issue Queue. All the instructions can be speculatively issued for execution in accordance with the classic out-of-order pipeline. For those instructions with suspect speculation flags, they are considered as safe instructions if their speculative execution will not refill new cache lines with unauthorized privilege data. Otherwise, they are considered as unsafe instructions and thus not allowed to execute speculatively. To reduce the performance impact from not executing unsafe instructions speculatively, we investigate two filtering mechanisms, Cachehit based Hazard Filter and Trusted Page Buffer based Hazard Filter to filter out false security hazards. Our design philosophy is to speculatively execute safe instructions to maintain the performance benefits of out-of-order execution while blocking the speculative execution of unsafe instructions for security consideration. We evaluate Conditional Speculation in terms of performance, security and area. The experimental results show that the hardware overhead is marginal and the performance overhead is minimal.},
+  keywords = {Hazards,Microprocessors,Out of order,Registers,Security,Security dependence,Spectre vulnerabilities defense,Speculative execution side-channel vulnerabilities},
+  file = {/Users/ilu/Zotero/storage/DPGRX63H/Li et al. - 2019 - Conditional Speculation An Effective Approach to Safeguard Out-of-Order Execution Against Spectre A.pdf}
+}
+
+@misc{linBranchPredictionNot2019,
+  title = {Branch {{Prediction Is Not}} a {{Solved Problem}}: {{Measurements}}, {{Opportunities}}, and {{Future Directions}}},
+  shorttitle = {Branch {{Prediction Is Not}} a {{Solved Problem}}},
+  author = {Lin, Chit-Kwan and Tarsa, Stephen J.},
+  year = {2019},
+  month = jun,
+  journal = {arXiv.org},
+  doi = {10.1109/IISWC47752.2019.9042108},
+  urldate = {2024-09-07},
+  abstract = {Modern branch predictors predict the vast majority of conditional branch instructions with near-perfect accuracy, allowing superscalar, out-of-order processors to maximize speculative efficiency and thus performance. However, this impressive overall effectiveness belies a substantial missed opportunity in single-threaded instructions per cycle (IPC). For example, we show that correcting the mispredictions made by the state-of-the-art TAGE-SC-L branch predictor on SPECint 2017 would improve IPC by margins similar to an advance in process technology node. In this work, we measure and characterize these mispredictions. We find that they categorically arise from either (1) a small number of systematically hard-to-predict (H2P) branches; or (2) rare branches with low dynamic execution counts. Using data from SPECint 2017 and additional large code footprint applications, we quantify the occurrence and IPC impact of these two categories. We then demonstrate that increasing the resources afforded to existing branch predictors does not alone address the root causes of most mispredictions. This leads us to reexamine basic assumptions in branch prediction and to propose new research directions that, for example, deploy machine learning to improve pattern matching for H2Ps, and use on-chip phase learning to track long-term statistics for rare branches.},
+  howpublished = {https://arxiv.org/abs/1906.08170v1},
+  langid = {english},
+  note = {Branch Prediction Championship ?
+\par
+Classified certain control flows as rare branches and concluded rare branches have worst statistics.
+\par
+used TAGE as a reference and tested on several benchmark suites which are relatively new. 
+\par
+Talks about how incresing the branch prediction capacity of a pipeline doesn't yield significantly better results on some intel processor. 
+\par
+Shows how several BP techniques scale in the Itnel processors.},
+  file = {/Users/ilu/Zotero/storage/UNPZFY9X/Lin and Tarsa - 2019 - Branch Prediction Is Not a Solved Problem Measurements, Opportunities, and Future Directions.pdf}
+}
+
+@misc{maisuradzeSpeculoseAnalyzingSecurity2018,
+  title = {Speculose: {{Analyzing}} the {{Security Implications}} of {{Speculative Execution}} in {{CPUs}}},
+  shorttitle = {Speculose},
+  author = {Maisuradze, Giorgi and Rossow, Christian},
+  year = {2018},
+  month = jan,
+  journal = {arXiv.org},
+  urldate = {2024-09-07},
+  abstract = {Whenever modern CPUs encounter a conditional branch for which the condition cannot be evaluated yet, they predict the likely branch target and speculatively execute code. Such pipelining is key to optimizing runtime performance and is incorporated in CPUs for more than 15 years. In this paper, to the best of our knowledge, we are the first to study the inner workings and the security implications of such speculative execution. We revisit the assumption that speculatively executed code leaves no traces in case it is not committed. We reveal several measurable side effects that allow adversaries to enumerate mapped memory pages and to read arbitrary memory---all using only speculated code that was never fully executed. To demonstrate the practicality of such attacks, we show how a user-space adversary can probe for kernel pages to reliably break kernel-level ASLR in Linux in under three seconds and reduce the Windows 10 KASLR entropy by 18{\textasciitilde}bits in less than a second.},
+  howpublished = {https://arxiv.org/abs/1801.04084v1},
+  langid = {english},
+  file = {/Users/ilu/Zotero/storage/HPYU2EM7/Maisuradze and Rossow - 2018 - Speculose Analyzing the Security Implications of Speculative Execution in CPUs.pdf}
+}
+
+@article{mohammadiDemandDynamicBranch2015,
+  title = {On-{{Demand Dynamic Branch Prediction}}},
+  author = {Mohammadi, Milad and Han, Song and Aamodt, Tor M. and Dally, William J.},
+  year = {2015},
+  month = jan,
+  journal = {IEEE Computer Architecture Letters},
+  volume = {14},
+  number = {1},
+  pages = {50--53},
+  issn = {1556-6064},
+  doi = {10.1109/LCA.2014.2330820},
+  urldate = {2024-09-07},
+  abstract = {In out-of-order (OoO) processors, speculative execution with high branch prediction accuracy is employed to achieve good single thread performance. In these processors the branch prediction unit tables (BPU) are accessed in parallel with the instruction cache before it is known whether a fetch group contains branch instructions. For integer applications, we find 85 percent of BPU lookups are done for non-branch operations and of the remaining lookups, 42 percent are done for highly biased branches that can be predicted statically with high accuracy. We evaluate on-demand branch prediction (ODBP), a novel technique that uses compiler generated hints to identify those instructions that can be more accurately predicted statically to eliminate unnecessary BPU lookups. We evaluate an implementation of ODBP that combines static and dynamic branch prediction. For a four wide superscalar processor, ODBP delivers as much as 9 percent improvement in average energy-delay (ED) product, 7 percent core average energy saving, and 3 percent speedup. ODBP also enables the use of large BPU's for a given power budget.},
+  keywords = {Accuracy,ahead prediction,Computer architecture,Energy efficiency,energy-delay product optimization,Equations,Mathematical model,Pipelines,Program processors,static and dynamic branch prediction hybrid,Tin},
+  file = {/Users/ilu/Zotero/storage/8SYD8EDQ/Mohammadi et al. - 2015 - On-Demand Dynamic Branch Prediction.pdf}
+}
+
+@misc{StaticMethodsHybrid,
+  title = {Static Methods in Hybrid Branch Prediction {\textbar} {{IEEE Conference Publication}} {\textbar} {{IEEE Xplore}}},
+  urldate = {2024-09-07},
+  howpublished = {https://ieeexplore.ieee.org/abstract/document/727254}
+}
+
+@article{vitekValidatingSideChannel,
+  title = {Validating {{Side Channel}} Models in {{RISC-V}} Using {{Model-Based Testing}}},
+  author = {Vitek, Viktor},
+  langid = {english},
+  file = {/Users/ilu/Zotero/storage/3DJ4DWPH/Vitek - Validating Side Channel models in RISC-V using Model-Based Testing.pdf}
+}
+
+@article{wallSpeculativeExecutionInstructionLevel,
+  title = {Speculative {{Execution}} and {{Instruction-Level Parallelism}}},
+  author = {Wall, David W},
+  abstract = {Full exploitation of instruction-level parallelism by superscalar and similar architectures requires speculative execution, in which we are willing to issue a potential future instruction early even though an intervening branch may send us in another direction entirely. Speculative execution can be based either on branch prediction, where we explore the most likely path away from the branch, or on branch fan-out, in which we explore both paths and sacrifice some hardware parallelism for the sake of not being entirely wrong. Recent techniques for branch prediction have greatly improved its potential success rate; we measure the effect this improvement has on parallelism. We also measure the effect of fan-out, alone and also in combination with a predictor. Finally, we consider the effect of fallible instructions, those that might lead to spurious program failure if we execute them speculatively; simply refusing to do so can drastically reduce the parallelism.},
+  langid = {english},
+  file = {/Users/ilu/Zotero/storage/ZYSMQJCW/Wall - Speculative Execution and Instruction-Level Parallelism.pdf}
+}
+
+@phdthesis{zhangHybridBranchPrediction2002,
+  title = {A Hybrid Branch Prediction Method: An Integration of Software and Hardware Techniques},
+  shorttitle = {A Hybrid Branch Prediction Method},
+  author = {Zhang, Ruijian},
+  year = {2002},
+  address = {USA},
+  school = {University of Houston},
+  annotation = {AAI3048349\\
+ISBN-10: 0493626492}
+}

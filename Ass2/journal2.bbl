@@ -1,0 +1,551 @@
+\begin{thebibliography}{10}
+
+\bibitem{augustusk.uhtDisjointEagerExecution2002}
+{Augustus K. Uht}.
+\newblock Disjoint {{Eager Execution}}: {{What It Is}} / {{What It Is Not}}.
+\newblock {\em ACM SIGARCH Cmputer Architecture News}, 30(1):12--14, March
+  2002.
+
+\bibitem{balasubramanianNoPenaltyControlHazard2024}
+Linknath~Surya Balasubramanian.
+\newblock {\em Towards {{No-Penalty Control Hazard Handling}} in {{RISC}}
+  Architecture Microcontrollers}.
+\newblock Thesis, Purdue University Graduate School, September 2024.
+
+\bibitem{BranchPredictionUnit}
+3. {{Branch Prediction Unit}} --- {{MARSS-RISCV}} 4.1a documentation.
+\newblock
+  https://marss-riscv-docs.readthedocs.io/en/latest/sections/branch-pred.html.
+
+\bibitem{calderFastAccurateInstruction1994}
+B.~Calder and D.~Grunwald.
+\newblock Fast and accurate instruction fetch and branch prediction.
+\newblock In {\em Proceedings of the 21st Annual International Symposium on
+  {{Computer}} Architecture}, {{ISCA}} '94, pages 2--11, Washington, DC, USA,
+  April 1994. IEEE Computer Society Press.
+
+\bibitem{emmaCharacterizationBranchData1987}
+P.~G. Emma and E.~S. Davidson.
+\newblock Characterization of branch and data dependencies on programs for
+  evaluating pipeline performance.
+\newblock {\em IEEE Trans. Comput.}, 36(7):859--875, July 1987.
+
+\bibitem{eversUsingHybridBranch1996}
+Marius Evers, Po-Yung Chang, and Yale~N. Patt.
+\newblock Using hybrid branch predictors to improve branch prediction accuracy
+  in the presence of context switches.
+\newblock {\em SIGARCH Comput. Archit. News}, 24(2):3--11, May 1996.
+
+\bibitem{evtyushkinBranchScopeNewSideChannel2018}
+Dmitry Evtyushkin, Ryan Riley, Nael CSE {and}~ECE {Abu-Ghazaleh}, and Dmitry
+  Ponomarev.
+\newblock {{BranchScope}}: {{A New Side-Channel Attack}} on {{Directional
+  Branch Predictor}}.
+\newblock {\em SIGPLAN Not.}, 53(2):693--707, March 2018.
+
+\bibitem{hartsteinOptimumPipelineDepth2002}
+A.~Hartstein and Thomas~R. Puzak.
+\newblock The optimum pipeline depth for a microprocessor.
+\newblock {\em SIGARCH Comput. Archit. News}, 30(2):7--13, May 2002.
+\newblock Old Paper \par Used a proprietary simulation system to simulate
+  various versions of Pipeline for varying depths. tested mainly for SPEC
+  benchmark suite. \par Need to study the section titled ``Theory'' more. \par
+  Not really sure about how the methodology can relate to the modern workloads.
+
+\bibitem{heSurveyComparisonPipeline2023}
+Yan He and Xiangning Chen.
+\newblock Survey and {{Comparison}} of {{Pipeline}} of {{Some RISC}} and {{CISC
+  System Architectures}}.
+\newblock In {\em 2023 8th {{International Conference}} on {{Computer}} and
+  {{Communication Systems}} ({{ICCCS}})}, pages 785--790, April 2023.
+\newblock Compares RISC and CISC \par Super Pipelining: Two-stage super
+  pipelined microprocessor, the task completed by each pipelined segment can be
+  divided into two non overlapping parts and each part can be executed within
+  half a clock cycle.
+
+\bibitem{johnsonBranchPredicationUsing1992}
+John~D. Johnson.
+\newblock Branch predication using large self history.
+\newblock Technical {{Report}}, Stanford University, Stanford, CA, USA,
+  November 1992.
+
+\bibitem{kocherSpectreAttacksExploiting2020}
+Paul Kocher, Jann Horn, Anders Fogh, Daniel Genkin, Daniel Gruss, Werner Haas,
+  Mike Hamburg, Moritz Lipp, Stefan Mangard, Thomas Prescher, Michael Schwarz,
+  and Yuval Yarom.
+\newblock Spectre attacks: Exploiting speculative execution.
+\newblock {\em Commun. ACM}, 63(7):93--101, June 2020.
+
+\bibitem{koruyehSpectreReturnsSpeculation2018}
+Esmaeil~Mohammadian Koruyeh, Khaled~N. Khasawneh, Chengyu Song, and Nael
+  {Abu-Ghazaleh}.
+\newblock Spectre {{Returns}}! {{Speculation Attacks}} using the {{Return Stack
+  Buffer}}.
+\newblock In {\em 12th {{USENIX Workshop}} on {{Offensive Technologies}}
+  ({{WOOT}} 18)}, 2018.
+
+\bibitem{kostromitinAnalysisMostCommon2020}
+Konstantin~I. Kostromitin, Boris~N. Dokuchaev, and Danila~A. Kozlov.
+\newblock Analysis of the {{Most Common Software}} and {{Hardware
+  Vulnerabilities}} in {{Microprocessor Systems}}.
+\newblock In {\em 2020 {{International Russian Automation Conference}}
+  ({{RusAutoCon}})}, pages 1031--1036, September 2020.
+
+\bibitem{liConditionalSpeculationEffective2019}
+Peinan Li, Lutan Zhao, Rui Hou, Lixin Zhang, and Dan Meng.
+\newblock Conditional {{Speculation}}: {{An Effective Approach}} to {{Safeguard
+  Out-of-Order Execution Against Spectre Attacks}}.
+\newblock In {\em 2019 {{IEEE International Symposium}} on {{High Performance
+  Computer Architecture}} ({{HPCA}})}, pages 264--276, February 2019.
+
+\bibitem{linBranchPredictionNot2019}
+Chit-Kwan Lin and Stephen~J. Tarsa.
+\newblock Branch {{Prediction Is Not}} a {{Solved Problem}}: {{Measurements}},
+  {{Opportunities}}, and {{Future Directions}}.
+\newblock https://arxiv.org/abs/1906.08170v1, June 2019.
+\newblock Branch Prediction Championship ? \par Classified certain control
+  flows as rare branches and concluded rare branches have worst statistics.
+  \par used TAGE as a reference and tested on several benchmark suites which
+  are relatively new. \par Talks about how incresing the branch prediction
+  capacity of a pipeline doesn't yield significantly better results on some
+  intel processor. \par Shows how several BP techniques scale in the Itnel
+  processors.
+
+\bibitem{maisuradzeSpeculoseAnalyzingSecurity2018}
+Giorgi Maisuradze and Christian Rossow.
+\newblock Speculose: {{Analyzing}} the {{Security Implications}} of
+  {{Speculative Execution}} in {{CPUs}}.
+\newblock https://arxiv.org/abs/1801.04084v1, January 2018.
+
+\bibitem{mohammadiDemandDynamicBranch2015}
+Milad Mohammadi, Song Han, Tor~M. Aamodt, and William~J. Dally.
+\newblock On-{{Demand Dynamic Branch Prediction}}.
+\newblock {\em IEEE Computer Architecture Letters}, 14(1):50--53, January 2015.
+
+\bibitem{StaticMethodsHybrid}
+Static methods in hybrid branch prediction {\textbar} {{IEEE Conference
+  Publication}} {\textbar} {{IEEE Xplore}}.
+\newblock https://ieeexplore.ieee.org/abstract/document/727254.
+
+\bibitem{vitekValidatingSideChannel}
+Viktor Vitek.
+\newblock Validating {{Side Channel}} models in {{RISC-V}} using {{Model-Based
+  Testing}}.
+
+\bibitem{wallSpeculativeExecutionInstructionLevel}
+David~W Wall.
+\newblock Speculative {{Execution}} and {{Instruction-Level Parallelism}}.
+
+\bibitem{zhangHybridBranchPrediction2002}
+Ruijian Zhang.
+\newblock {\em A Hybrid Branch Prediction Method: An Integration of Software
+  and Hardware Techniques}.
+\newblock PhD thesis, University of Houston, USA, 2002.
+
+\bibitem{BranchPredictionRISCVBOOM}
+Branch {{Prediction}} --- {{RISCV-BOOM}} documentation.
+\newblock https://docs.boom-core.org/en/latest/sections/branch-prediction/.
+\newblock Clear explanation aboout the BOOM Outof order RISCV core with
+  emphasis on it's branch prediction strategy.
+
+\bibitem{hoogerbruggeDynamicBranchPrediction2000}
+J.~Hoogerbrugge.
+\newblock Dynamic branch prediction for a {{VLIW}} processor.
+\newblock In {\em Proceedings 2000 {{International Conference}} on {{Parallel
+  Architectures}} and {{Compilation Techniques}} ({{Cat}}.
+  {{No}}.{{PR00622}})}, pages 207--214, October 2000.
+\newblock Selective Branch Prediction for VLIW Processors. mixinf predicted and
+  delayed branches yielded performance improvements.
+
+\bibitem{laljaReducingBranchPenalty1988}
+D.~J. Lalja.
+\newblock Reducing the branch penalty in pipelined processors.
+\newblock {\em Computer}, 21(7):47--55, July 1988.
+\newblock ``Branch bypass and multiple prefetch'' ~this is what you are
+  thinking along with multiple decode units. Read more about this as this
+  contains some methods to quantify such hypothetical machines.
+
+\bibitem{azharApproxRMReducingEnergy2023}
+Muhammad~Waqar Azhar, Madhavan Manivannan, and Per Stenstr{\"o}m.
+\newblock Approx-{{RM}}: {{Reducing Energy}} on {{Heterogeneous Multicore
+  Processors}} under {{Accuracy}} and {{Timing Constraints}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(3):44:1--44:25, July 2023.
+\newblock 15 secs, Trashit, Not related.
+
+\bibitem{benmezianeMultiobjectiveHardwareawareNeural2023}
+Hadjer Benmeziane, Hamza Ouarnoughi, Kaoutar El~Maghraoui, and Smail Niar.
+\newblock Multi-objective {{Hardware-aware Neural Architecture Search}} with
+  {{Pareto Rank-preserving Surrogate Models}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(2):29:1--29:21, April 2023.
+\newblock 20 secs, Trashit, Not related.
+
+\bibitem{chenFlexPointerFastAddress2023}
+Dongwei Chen, Dong Tong, Chun Yang, Jiangfang Yi, and Xu~Cheng.
+\newblock {{FlexPointer}}: {{Fast Address Translation Based}} on {{Range TLB}}
+  and {{Tagged Pointers}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(2):30:1--30:24, March 2023.
+\newblock 50 secs, Scan it, Address translation methodology in TLB.
+
+\bibitem{chenJointlyOptimizingJob2023}
+Ruobing Chen, Haosen Shi, Jinping Wu, Yusen Li, Xiaoguang Liu, and Gang Wang.
+\newblock Jointly {{Optimizing Job Assignment}} and {{Resource Partitioning}}
+  for {{Improving System Throughput}} in {{Cloud Datacenters}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(3):34:1--34:24, July 2023.
+\newblock 40secs, Trashit, Not related.
+
+\bibitem{chenLockFreeHighperformanceHashing2022}
+Zhangyu Chen, Yu~Hua, Luochangqi Ding, Bo~Ding, Pengfei Zuo, and Xue Liu.
+\newblock Lock-{{Free High-performance Hashing}} for {{Persistent Memory}} via
+  {{PM-aware Holistic Optimization}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(1):5:1--5:26, November 2022.
+\newblock 30 sec, Trash it, Not related.
+
+\bibitem{duFastOneSidedRDMABased2023}
+Jingwen Du, Fang Wang, Dan Feng, Changchen Gan, Yuchao Cao, Xiaomin Zou, and
+  Fan Li.
+\newblock Fast {{One-Sided RDMA-Based State Machine Replication}} for
+  {{Disaggregated Memory}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(2):31:1--31:25, April 2023.
+
+\bibitem{erisPuppeteerRandomForest2022}
+Furkan Eris, Marcia Louis, Kubra Eris, Jos{\'e} Abell{\'a}n, and Ajay Joshi.
+\newblock Puppeteer: {{A Random Forest Based Manager}} for {{Hardware
+  Prefetchers Across}} the {{Memory Hierarchy}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(1):19:1--19:25, December
+  2022.
+\newblock 30 secs, Scan it, a new IF block block design for each level of
+  memory, related to your approach of solving your problem of branch
+  prediction.
+
+\bibitem{espindolaSourceMatchingRewriting2023}
+Vinicius Espindola, Luciano Zago, Herv{\'e} Yviquel, and Guido Araujo.
+\newblock Source {{Matching}} and {{Rewriting}} for {{MLIR Using String-Based
+  Automata}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(2):22:1--22:26, March 2023.
+\newblock 2:00, Trash it, talks about MLIR in the perspective of compilers, and
+  translators.
+
+\bibitem{gondimallaOccamOptimalData2022}
+Ashish Gondimalla, Jianqiao Liu, Mithuna Thottethodi, and T.~N. Vijaykumar.
+\newblock Occam: {{Optimal Data Reuse}} for {{Convolutional Neural Networks}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(1):12:1--12:25, December
+  2022.
+\newblock 12 secs, Trash it, Not related.
+
+\bibitem{huangSplitZNSEfficientLSMTree2023}
+Dong Huang, Dan Feng, Qiankun Liu, Bo~Ding, Wei Zhao, Xueliang Wei, and Wei
+  Tong.
+\newblock {{SplitZNS}}: {{Towards}} an {{Efficient LSM-Tree}} on {{Zoned
+  Namespace SSDs}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(3):45:1--45:26, August 2023.
+\newblock 1:15. Trashit, Related to SSDs.
+
+\bibitem{hurFastFlexibleFPGAbased2023}
+Suyeon Hur, Seongmin Na, Dongup Kwon, Joonsung Kim, Andrew Boutros, Eriko
+  Nurvitadhi, and Jangwoo Kim.
+\newblock A {{Fast}} and {{Flexible FPGA-based Accelerator}} for {{Natural
+  Language Processing Neural Networks}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(1):11:1--11:24, February
+  2023.
+\newblock 10 secs, Trash it, Not related.
+
+\bibitem{jiangHierarchicalModelParallelism2023}
+Jiazhi Jiang, Zijian Huang, Dan Huang, Jiangsu Du, Lin Chen, Ziguan Chen, and
+  Yutong Lu.
+\newblock Hierarchical {{Model Parallelism}} for {{Optimizing Inference}} on
+  {{Many-core Processor}} via {{Decoupled 3D-CNN Structure}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(3):42:1--42:21, July 2023.
+\newblock 2:00, trashit, not related and you couldn't make sense of it.
+
+\bibitem{jinSpecTerminatorBlockingSpeculative2023a}
+Hai Jin, Zhuo He, and Weizhong Qiang.
+\newblock {{SpecTerminator}}: {{Blocking Speculative Side Channels Based}} on
+  {{Instruction Classes}} on {{RISC-V}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(1):15:1--15:26, February
+  2023.
+\newblock Critical READ,45 seec, scan it, talks about bblocking SPECTRE attacks
+  in RISCV. Need to get the grip on different types of SPECTRE attacks. You may
+  actually be mitigating only one based on the text. Delayed execution
+  strategies, TLB request ignoring, Classifiation of LOAD instructions in ISA
+  whic are speculative depended baased on the architectural changes., TAble 1
+  has existing hardware defecnecs against spectre attacks, need to critically
+  read those in hte coming days. Experimental setup is unique instead of using
+  genric simiulation like gem5 using FPGA simulation platform will give more
+  access towards the architectural changes ? this doesn't mean it is biased, it
+  is required for the analysis of the experiment results. I donno BOOM might
+  not have been the best processor to choose, a multiple issue inorder may be
+  would've yielded different results ? Finally, SPECTerminator has a lowe
+  performance ocverheard than other hardwaare or OS based techniques.
+
+\bibitem{korostelevYaConvConvolutionLow2023}
+Ivan Korostelev, Jo{\~a}o~P. L.~De~Carvalho, Jos{\'e} Moreira, and
+  Jos{\'e}~Nelson Amaral.
+\newblock {{YaConv}}: {{Convolution}} with {{Low Cache Footprint}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(1):18:1--18:18, February
+  2023.
+\newblock 2:00, Trash it, Kinda related but talks about a new algorithm to
+  compute convolution in cnns.
+
+\bibitem{krolikRNdNFastQuery2023}
+Alexander Krolik, Clark Verbrugge, and Laurie Hendren.
+\newblock {{rNdN}}: {{Fast Query Compilation}} for {{NVIDIA GPUs}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(3):41:1--41:25, July 2023.
+\newblock 30 secs, Trash it, Not related.
+
+\bibitem{liangQuantifyingResourceContention2023}
+Yi~Liang, Shaokang Zeng, and Lei Wang.
+\newblock Quantifying {{Resource Contention}} of {{Co-located Workloads}} with
+  the {{System-level Entropy}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(1):10:1--10:25, February
+  2023.
+\newblock 30 secs, Trash it, Resource utilization improvement in key-value like
+  data wrt Datacenters.
+
+\bibitem{liuUnifiedBufferCompiling2023}
+Qiaoyi Liu, Jeff Setter, Dillon Huff, Maxwell Strange, Kathleen Feng, Mark
+  Horowitz, Priyanka Raina, and Fredrik Kjolstad.
+\newblock Unified {{Buffer}}: {{Compiling Image Processing}} and {{Machine
+  Learning Applications}} to {{Push-Memory Accelerators}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(2):26:1--26:26, March 2023.
+\newblock 2:00, Treshit, Not related.
+
+\bibitem{luinaudSymbolicAnalysisData2022}
+Thomas Luinaud, J.~M.~Pierre Langlois, and Yvon Savaria.
+\newblock Symbolic {{Analysis}} for {{Data Plane Programs Specialization}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(1):1:1--1:21, November 2022.
+\newblock 1:00, traash it, Processing datapackets using FPGA.
+
+\bibitem{maOptimizedFrameworkMatrix2023}
+Wenjing Ma, Fangfang Liu, Daokun Chen, Qinglin Lu, Yi~Hu, Hongsen Wang, and
+  Xinhui Yuan.
+\newblock An {{Optimized Framework}} for {{Matrix Factorization}} on the {{New
+  Sunway Many-core Platform}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(2):23:1--23:24, March 2023.
+\newblock 2:00, Trashit, Talsk about sunway processor as a whole.
+
+\bibitem{mastorasDesignImplementationNonblocking2022}
+Aristeidis Mastoras, Sotiris Anagnostidis, and Albert-Jan~N. Yzelman.
+\newblock Design and {{Implementation}} for {{Nonblocking Execution}} in
+  {{GraphBLAS}}: {{Tradeoffs}} and {{Performance}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(1):6:1--6:23, November 2022.
+\newblock 35 secs, scan it, could be useful as you can see how the pipeline
+  reacts to multi threading and it's execution flow.
+
+\bibitem{minerviniVitruviusAreaEfficientRISCV2023}
+Francesco Minervini, Oscar Palomar, Osman Unsal, Enrico Reggiani, Josue
+  Quiroga, Joan Marimon, Carlos Rojas, Roger Figueras, Abraham Ruiz, Alberto
+  Gonzalez, Jonnatan Mendoza, Ivan Vargas, C{\'e}sar Hernandez, Joan Cabre,
+  Lina Khoirunisya, Mustapha Bouhali, Julian Pavon, Francesc Moll, Mauro
+  Olivieri, Mario Kovac, Mate Kovac, Leon Dragic, Mateo Valero, and Adrian
+  Cristal.
+\newblock Vitruvius+: {{An Area-Efficient RISC-V Decoupled Vector Coprocessor}}
+  for {{High Performance Computing Applications}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(2):28:1--28:25, March 2023.
+\newblock 2:00, Definite Scan, HPC through modification of ISA RISC-Vfor
+  Exascale systems.
+
+\bibitem{mummidiACTIONAdaptiveCache2023}
+Chandra~Sekhar Mummidi and Sandip Kundu.
+\newblock {{ACTION}}: {{Adaptive Cache Block Migration}} in {{Distributed Cache
+  Architectures}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(2):25:1--25:19, March 2023.
+\newblock 45 sec, SCan it, Could be potentially used to mitigate Spec.
+  Execution.
+
+\bibitem{olgunPiDRAMHolisticEndend2022}
+Ataberk Olgun, Juan~G{\'o}mez Luna, Konstantinos Kanellopoulos, Behzad Salami,
+  Hasan Hassan, Oguz Ergin, and Onur Mutlu.
+\newblock {{PiDRAM}}: {{A Holistic End-to-end FPGA-based Framework}} for
+  {{Processing-in-DRAM}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(1):8:1--8:31, November 2022.
+\newblock 58sec, Scan it, Near memory computing paradigm using simulators,
+  could be an interesting study.
+
+\bibitem{pengFlexHMPracticalSystem2022}
+Bo~Peng, Yaozu Dong, Jianguo Yao, Fengguang Wu, and Haibing Guan.
+\newblock {{FlexHM}}: {{A Practical System}} for {{Heterogeneous Memory}} with
+  {{Flexible}} and {{Efficient Performance Optimizations}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(1):13:1--13:26, December
+  2022.
+\newblock 1:30, scan it, Talks about memory optimization for performance gains
+  using Flexhm in optane memory system and NVM. Diversity in testing with
+  benchmarks. Experimental set up not biased.
+
+\bibitem{perezUserdrivenOnlineKernel2023}
+V{\'i}ctor P{\'e}rez, Lukas Sommer, Victor Lom{\"u}ller, Kumudha Narasimhan,
+  and Mehdi Goli.
+\newblock User-driven {{Online Kernel Fusion}} for {{SYCL}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(2):21:1--21:25, March 2023.
+\newblock 1:00, Trasahit, Talks about the parallel programming appeoch from
+  kernel's perpective.
+
+\bibitem{puthoorTurnbasedSpatiotemporalCoherence2023}
+Sooraj Puthoor and Mikko~H. Lipasti.
+\newblock Turn-based {{Spatiotemporal Coherence}} for {{GPUs}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(3):33:1--33:27, July 2023.
+\newblock 1:30, trashit, spatiotemporal coherence in caches, a very interesting
+  read, you should try.
+
+\bibitem{raviTNTModularApproach2023}
+Gokul~Subramanian Ravi, Tushar Krishna, and Mikko Lipasti.
+\newblock {{TNT}}: {{A Modular Approach}} to {{Traversing Physically
+  Heterogeneous NOCs}} at {{Bare-wire Latency}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(3):35:1--35:25, July 2023.
+\newblock 1:30, Not sure about this, talks about esthablishing a communication
+  networks between the many networks of exa scale systems.
+
+\bibitem{reberCacheProgrammingScientific2023}
+Benjamin Reber, Matthew Gould, Alexander~H. Kneipp, Fangzhou Liu, Ian Prechtl,
+  Chen Ding, Linlin Chen, and Dorin Patru.
+\newblock Cache {{Programming}} for {{Scientific Loops Using Leases}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(3):39:1--39:25, July 2023.
+\newblock 1:30, treashit, talks about securing the cache in GPU and CPU using
+  leasing approach. Very interesting.
+
+\bibitem{sahniASMAdaptiveSecure2023}
+Abdul~Rasheed Sahni, Hamza Omar, Usman Ali, and Omer Khan.
+\newblock {{ASM}}: {{An Adaptive Secure Multicore}} for {{Co-located Mutually
+  Distrusting Processes}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(3):32:1--32:24, July 2023.
+\newblock 2:00, scanit, secure orocessor ddesign for evaluating the execution
+  processes in distributed computingn paradigm and virtualizzation too.
+
+\bibitem{sakalisDelaySquashStoppingMicroarchitectural2022}
+Christos Sakalis, Stefanos Kaxiras, and Magnus Sj{\"a}lander.
+\newblock Delay-on-{{Squash}}: {{Stopping Microarchitectural Replay Attacks}}
+  in {{Their Tracks}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(1):9:1--9:24, November 2022.
+\newblock Critical REad, 45 sec, Scan it, Talks about halting/disallowing
+  speculative execution after page miss, very closely related to your work.The
+  poinnt is not to significantly impact the performance but to stop replay
+  attacks by tracking the squashes. Bloom filters are suedd to deteect if a PC
+  is ina set after hashing it if yes, then a bulk reset is the only way to
+  reset the filter which will change the pc. approach is to ise two bloom
+  fileters and switch between them. at ny point in time only fileter is tagged
+  as active. the other one will wait to be cleard. after the the active filter
+  is cleared the status is altered on both filters. take figure 4 for IPC
+  metric.
+
+\bibitem{schulerXEngineOptimalTensor2022}
+Manuela Schuler, Richard Membarth, and Philipp Slusallek.
+\newblock {{XEngine}}: {{Optimal Tensor Rematerialization}} for {{Neural
+  Networks}} in {{Heterogeneous Environments}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(1):17:1--17:25, December
+  2022.
+\newblock 1:12, Trash it, talks about memory effeciency in tensors.
+
+\bibitem{shahBullsEyeScalableAccurate2022}
+Nilesh~Rajendra Shah, Ashitabh Misra, Antoine Min{\'e}, Rakesh Venkat, and
+  Ramakrishna Upadrasta.
+\newblock {{BullsEye}} : {{Scalable}} and {{Accurate Approximation Framework}}
+  for {{Cache Miss Calculation}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(1):2:1--2:28, November 2022.
+\newblock 1:47, Scan it, Talks about cache miss calculations in the perspective
+  of math resulting in an approach called BULLSEYE, could be useful to evaluate
+  BTB for virtual addresses.
+
+\bibitem{shahTokenSmartDistributedScalable2022}
+Parth Shah, Ranjal~Gautham Shenoy, Vaidyanathan Srinivasan, Pradip Bose, and
+  Alper Buyuktosunoglu.
+\newblock {{TokenSmart}}: {{Distributed}}, {{Scalable Power Management}} in the
+  {{Many-core Era}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(1):4:1--4:26, November 2022.
+\newblock 1:12, Trash it, Talks about power management in multi-core systems.
+
+\bibitem{singhHyGainHighperformanceEnergyefficient2023}
+Sarabjeet Singh, Neelam Surana, Kailash Prasad, Pranjali Jain, Joycee Mekie,
+  and Manu Awasthi.
+\newblock {{HyGain}}: {{High-performance}}, {{Energy-efficient Hybrid Gain
+  Cell-based Cache Hierarchy}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(2):24:1--24:20, March 2023.
+\newblock 1:00, Traash it, NOt relatd.
+
+\bibitem{soniApproximateComputing2022}
+Mitali Soni, Asmita Pal, and Joshua~San Miguel.
+\newblock As-{{Is Approximate Computing}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(1):3:1--3:26, November 2022.
+\newblock 2:00, Scan it, Approximation of execution output and talks about
+  architecture, potential interesting read.
+
+\bibitem{tollenaereAutotuningConvolutionsEasier2023}
+Nicolas Tollenaere, Guillaume Iooss, St{\'e}phane Pouget, Hugo Brunie,
+  Christophe Guillon, Albert Cohen, P.~Sadayappan, and Fabrice Rastello.
+\newblock Autotuning {{Convolutions Is Easier Than You Think}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(2):20:1--20:24, March 2023.
+\newblock 30 secs, trash it, Not related.
+
+\bibitem{xieMPUMemorycentricSIMT2023}
+Xinfeng Xie, Peng Gu, Yufei Ding, Dimin Niu, Hongzhong Zheng, and Yuan Xie.
+\newblock {{MPU}}: {{Memory-centric SIMT Processor}} via {{In-DRAM Near-bank
+  Computing}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(3):40:1--40:26, July 2023.
+\newblock 2:00, Scan it, Relatedd to the other paper in issue 2 with near
+  memory computoing.
+
+\bibitem{xuAcceleratingConvolutionalNeural2023}
+Weizhi Xu, Yintai Sun, Shengyu Fan, Hui Yu, and Xin Fu.
+\newblock Accelerating {{Convolutional Neural Network}} by {{Exploiting
+  Sparsity}} on {{GPUs}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(3):36:1--36:26, July 2023.
+\newblock 30 secs, Trash it, Not related.
+
+\bibitem{xuSSDSGDCommunicationSparsification2022}
+Yemao Xu, Dezun Dong, Dongsheng Wang, Shi Xu, Enda Yu, Weixia Xu, and Xiangke
+  Liao.
+\newblock {{SSD-SGD}}: {{Communication Sparsification}} for {{Distributed Deep
+  Learning Training}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(1):7:1--7:25, December 2022.
+\newblock 2:00, scan, Contains a theory about Data Parallelism might be useful.
+
+\bibitem{yuzugulerScaleoutSystolicArrays2023}
+Ahmet~Caner Y{\"u}z{\"u}g{\"u}ler, Canberk S{\"o}nmez, Mario Drumond, Yunho Oh,
+  Babak Falsafi, and Pascal Frossard.
+\newblock Scale-out {{Systolic Arrays}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(2):27:1--27:25, March 2023.
+\newblock 25, Trashit, Not related.
+
+\bibitem{zhangRegCPythonRegisterbasedPython2022}
+Qiang Zhang, Lei Xu, and Baowen Xu.
+\newblock {{RegCPython}}: {{A Register-based Python Interpreter}} for {{Better
+  Performance}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(1):14:1--14:25, December
+  2022.
+\newblock 1:10, Trash it, register heavy Byte-code generation for python.
+
+\bibitem{zhaoGraphTuneEfficientDependencyAware2023}
+Jin Zhao, Yu~Zhang, Ligang He, Qikun Li, Xiang Zhang, Xinyu Jiang, Hui Yu,
+  Xiaofei Liao, Hai Jin, Lin Gu, Haikun Liu, Bingsheng He, Ji~Zhang, Xianzheng
+  Song, Lin Wang, and Jun Zhou.
+\newblock {{GraphTune}}: {{An Efficient Dependency-Aware Substrate}} to
+  {{Alleviate Irregularity}} in {{Concurrent Graph Processing}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(3):37:1--37:24, July 2023.
+\newblock 30 secs, Trash it, Not related.
+
+\bibitem{zhaoMFFTGPUAccelerated2023}
+Yuwen Zhao, Fangfang Liu, Wenjing Ma, Huiyuan Li, Yuanchi Peng, and Cui Wang.
+\newblock {{MFFT}}: {{A GPU Accelerated Highly Efficient Mixed-Precision
+  Large-Scale FFT Framework}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(3):43:1--43:23, July 2023.
+\newblock 55secs, Trashit, Noe related.
+
+\bibitem{zhaoPolyhedralSpecificationCode2022}
+Tuowen Zhao, Tobi Popoola, Mary Hall, Catherine Olschanowsky, and Michelle
+  Strout.
+\newblock Polyhedral {{Specification}} and {{Code Generation}} of {{Sparse
+  Tensor Contraction}} with {{Co-iteration}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(1):16:1--16:26, December
+  2022.
+\newblock 1:30, trash it, Related to a different compilation technique.
+
+\bibitem{zhouImpactPageSize2023}
+Yufeng Zhou, Alan~L. Cox, Sandhya Dwarkadas, and Xiaowan Dong.
+\newblock The {{Impact}} of {{Page Size}} and {{Microarchitecture}} on
+  {{Instruction Address Translation Overhead}}.
+\newblock {\em ACM Trans. Archit. Code Optim.}, 20(3):38:1--38:25, July 2023.
+\newblock Critical rEad, 2:00, Scan it, Talks about how page size and pipeline
+  can impact hardware overhead of address translation. Quatification of
+  different TLB organization based on overhead. TLB overhead is about 13.44\%
+  of execution cycles. taken experimental setups XEon and Ryzen Free BSD OS.
+  table 1 for TLB structures. Fig 1 for comparisions with differnt workloads.
+
+\end{thebibliography}
