@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex journal3"] 1726059200 "journal3.aux" "journal3.bbl" "journal3" 1726059200
+["bibtex journal3"] 1726337464 "journal3.aux" "journal3.bbl" "journal3" 1726337464
   "/usr/local/texlive/2022/texmf-dist/bibtex/bst/base/alpha.bst" 1292289607 23907 a5f93555796fb564b924339521f10a7c ""
-  "journal3.aux" 1726059199 1015 fd8e7e7379610adaeb73a6cb856721e3 "pdflatex"
+  "journal3.aux" 1726337463 1474 84754ad027a75d7881c3bbec9d6d5dcb "pdflatex"
   "references.bib" 0 -1 0 ""
   (generated)
   "journal3.bbl"
   "journal3.blg"
-["pdflatex"] 1726059198 "/Users/ilu/CompSci-Research/Assignment3/journal3.tex" "journal3.pdf" "journal3" 1726059200
-  "/Users/ilu/CompSci-Research/Assignment3/journal3.tex" 1726059197 927 492f5caff1bf42306fd68133d7baa209 ""
+["pdflatex"] 1726337462 "/Users/ilu/CompSci-Research/Assignment3/journal3.tex" "journal3.pdf" "journal3" 1726337464
+  "/Users/ilu/CompSci-Research/Assignment3/journal3.tex" 1726337459 2244 6e40cbc7ed0d25841fef3d6522c57b53 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -85,10 +85,10 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1675935376 2826433 e62d3a7ca9ba6d578ecf636493d157cd ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "journal3.aux" 1726059199 1015 fd8e7e7379610adaeb73a6cb856721e3 "pdflatex"
+  "journal3.aux" 1726337463 1474 84754ad027a75d7881c3bbec9d6d5dcb "pdflatex"
   "journal3.bbl" 0 -1 0 "bibtex journal3"
-  "journal3.out" 1726059199 171 fcc1ba151f018784fd134763276d8c15 "pdflatex"
-  "journal3.tex" 1726059197 927 492f5caff1bf42306fd68133d7baa209 ""
+  "journal3.out" 1726337463 636 e296243da0412c29df51672c59fd318a "pdflatex"
+  "journal3.tex" 1726337459 2244 6e40cbc7ed0d25841fef3d6522c57b53 ""
   (generated)
   "journal3.aux"
   "journal3.log"
