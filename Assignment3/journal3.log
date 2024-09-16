@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.9)  14 SEP 2024 12:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.9)  15 SEP 2024 19:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -337,27 +337,35 @@ LaTeX Info: Redefining \nameref on input line 20.
 \@outlinefile=\write3
 \openout3 = `journal3.out'.
 
+ [1
 
-No file journal3.bbl.
-[1
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./journal3.bbl
+Underfull \hbox (badness 7133) in paragraph at lines 10--15
+[]\OT1/cmr/m/n/10 Sparsh Mit-tal.  A sur-vey of tech-niques for dy-namic branch pre-dic-tion.  \OT1/cmr/m/it/10 Con-
+ []
 
-{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./journal3.aux)
+
+Underfull \hbox (badness 7273) in paragraph at lines 10--15
+\OT1/cmr/m/it/10 cur-rency and Com-pu-ta-tion: Prac-tice and Ex-pe-ri-ence\OT1/cmr/m/n/10 , 31(1):e4666, 2019.  []eprint:
+ []
+
+[2]) [3] (./journal3.aux)
 Package rerunfilecheck Info: File `journal3.out' has not changed.
-(rerunfilecheck)             Checksum: E296243DA0412C29DF51672C59FD318A;636.
+(rerunfilecheck)             Checksum: 9D24AB8519941E8F7AB55C4962DC4A1B;1350.
  ) 
 Here is how much of TeX's memory you used:
- 10321 strings out of 478268
- 163602 string characters out of 5846348
- 481705 words of memory out of 5000000
- 28403 multiletter control sequences out of 15000+600000
- 473880 words of font info for 44 fonts, out of 8000000 for 9000
+ 10362 strings out of 478268
+ 164266 string characters out of 5846348
+ 483931 words of memory out of 5000000
+ 28419 multiletter control sequences out of 15000+600000
+ 474534 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,6n,63p,279b,338s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on journal3.pdf (1 page, 58765 bytes).
+ 60i,6n,63p,311b,460s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on journal3.pdf (3 pages, 94303 bytes).
 PDF statistics:
- 66 PDF objects out of 1000 (max. 8388607)
- 54 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 500000)
- 49 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 126 PDF objects out of 1000 (max. 8388607)
+ 107 compressed objects within 2 object streams
+ 34 named destinations out of 1000 (max. 500000)
+ 89 words of extra memory for PDF output out of 10000 (max. 10000000)
 

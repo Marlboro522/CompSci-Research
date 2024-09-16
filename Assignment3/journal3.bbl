@@ -1,0 +1,30 @@
+\begin{thebibliography}{1}
+
+\bibitem{josephSurveyDeepLearning2021}
+Rinu Joseph.
+\newblock A {Survey} of {Deep} {Learning} {Techniques} for {Dynamic} {Branch}
+  {Prediction}, December 2021.
+\newblock arXiv:2112.14911 [cs].
+
+\bibitem{mittalSurveyTechniquesDynamic2019a}
+Sparsh Mittal.
+\newblock A survey of techniques for dynamic branch prediction.
+\newblock {\em Concurrency and Computation: Practice and Experience},
+  31(1):e4666, 2019.
+\newblock \_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1002/cpe.4666.
+
+\bibitem{penneySurveyMachineLearning2019}
+Drew~D. Penney and Lizhong Chen.
+\newblock A {Survey} of {Machine} {Learning} {Applied} to {Computer}
+  {Architecture} {Design}, September 2019.
+\newblock arXiv:1909.12373 [cs].
+
+\bibitem{rodriguesPerformanceAnalysisBigLITTLE2021}
+Froila~V. Rodrigues and Nitesh~B. Guinde.
+\newblock Performance {Analysis} of {Big}.{LITTLE} {System} with {Various}
+  {Branch} {Prediction} {Schemes}.
+\newblock In Gyanendra~K. Verma, Badal Soni, Salah Bourennane, and Alexandre
+  C.~B. Ramos, editors, {\em Data {Science}: {Theory}, {Algorithms}, and
+  {Applications}}, pages 59--72. Springer, Singapore, 2021.
+
+\end{thebibliography}
