@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex journal2"] 1725844753 "journal2.aux" "journal2.bbl" "journal2" 1725844757
+["bibtex journal2"] 1725844753 "journal2.aux" "journal2.bbl" "journal2" 1726447530
   "/usr/local/texlive/2022/texmf-dist/bibtex/bst/base/unsrt.bst" 1292289607 18030 1376b4b231b50c66211e47e42eda2875 ""
   "Part3.bib" 1725844033 106469 d0a72c0512138364c36adc9a5c827377 ""
-  "journal2.aux" 1725844756 8183 47f1249947ac6e83479777c702504557 "pdflatex"
+  "journal2.aux" 1726447530 8183 47f1249947ac6e83479777c702504557 "pdflatex"
   "part2.bib" 1725841235 34690 29436f9eb07bcf8d593f3968c3170e73 ""
   (generated)
   "journal2.bbl"
   "journal2.blg"
-["pdflatex"] 1725844753 "/Users/ilu/CompSci-Research/Ass2/journal2.tex" "journal2.pdf" "journal2" 1725844757
-  "/Users/ilu/CompSci-Research/Ass2/journal2.tex" 1725844753 8929 1e93e6e4b6fcd45df1050ffc1f8428da ""
+["pdflatex"] 1726447526 "/Users/ilu/CompSci-Research/Assignment2/journal2.tex" "journal2.pdf" "journal2" 1726447530
+  "/Users/ilu/CompSci-Research/Assignment2/journal2.tex" 1725844789 8929 1e93e6e4b6fcd45df1050ffc1f8428da ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -100,10 +100,10 @@
   "4.png" 1725842176 242347 9e09fafcc460d576405928e916011128 ""
   "5.png" 1725842177 328175 5bde63ead32622f8d976c56fa2ea91d3 ""
   "6.png" 1725842177 241527 93f2a86594ec2e6db5899b251d244abf ""
-  "journal2.aux" 1725844756 8183 47f1249947ac6e83479777c702504557 "pdflatex"
+  "journal2.aux" 1726447530 8183 47f1249947ac6e83479777c702504557 "pdflatex"
   "journal2.bbl" 1725844753 27246 6f8410771bfb516e7c7fe4624113642f "bibtex journal2"
-  "journal2.out" 1725844756 1859 6bd917be25a32ac6b11fc6b95a4aa6dc "pdflatex"
-  "journal2.tex" 1725844753 8929 1e93e6e4b6fcd45df1050ffc1f8428da ""
+  "journal2.out" 1726447530 1859 6bd917be25a32ac6b11fc6b95a4aa6dc "pdflatex"
+  "journal2.tex" 1725844789 8929 1e93e6e4b6fcd45df1050ffc1f8428da ""
   (generated)
   "journal2.aux"
   "journal2.log"

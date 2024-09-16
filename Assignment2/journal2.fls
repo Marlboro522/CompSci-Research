@@ -1,8 +1,8 @@
-PWD /Users/ilu/CompSci-Research/Ass2
+PWD /Users/ilu/CompSci-Research/Assignment2
 INPUT /usr/local/texlive/2022/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/ilu/CompSci-Research/Ass2/journal2.tex
+INPUT /Users/ilu/CompSci-Research/Assignment2/journal2.tex
 OUTPUT journal2.log
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
