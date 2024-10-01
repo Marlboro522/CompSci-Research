@@ -4,9 +4,103 @@
 \usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{url}
 \title{Journal, Week-4}
 \author{Raja Kantheti}
 \begin{document}
 \maketitle
+
+\section*{Refined Survey Topic:}
+As I eventually want to work with RISC-V core and branch prediction, It would be beneficial to me if
+I could survey the existing branch prediction techniques on RISC-V core which are available in the \emph{gem5} simulator.
+So, I would like to narrow down the topic to \emph{A Survey of Branch Prediction Techniques on RISC-V core}.
+
+\section*{8 story elements to this story line:}
+Each branch predictor behaves drastically differently from the others. We need an unbiased benchmark
+to test the efficiency of each technique. The goal is to understand how each technique works with the core and leverage its features so that we can better understand the need to predict or eradicate branch prediction.
+It is challenging and complex to design the script that runs the simulations on gem5 and aggregate the results as we 
+desire. Exploring the solution domain that favors automatic usage of all the branch prediction techniques would be helpful.  
+\section*{Techniques explored in this paper:}
+\begin{itemize}
+    \item Local
+    \item L-TAGE
+    \item BiMODE
+    \item Tournament
+    \item Tage-SC-L
+    \item Multiperspective Perceptron
+    \item Multiperspective Perceptron TAGE
+\end{itemize}
+% Need a better Figure bro. 
+Refer to Fig 1\ref{fig:mesh1} for the techniques explored in this paper.
+\begin{figure}
+    \includegraphics*[width=14cm, height = 7cm]{techniques.png} \label {fig:mesh1}
+\end{figure}
+
+\paragraph*{}
+The paper would have the evaluations from the simulations conducted in the \emph{gem5} simulator. The benchmark would be the latest \emph{SPEC CPU}. 
+
+\section*{Papers available for Literature Review :}
+Each of the papers in the below section often has each branch prediction technique outlined in detail. 
+\subsection*{Survey Papers available for all branch prediction techniques:}
+\begin{enumerate}
+    \item \url{https://ar5iv.labs.arxiv.org/html/1804.00261}
+    \item \url{http://arxiv.org/abs/1909.12373}
+    \item \url{https://doi.org/10.1007/978-981-16-1681-5_5}
+    \item \url{http://arxiv.org/abs/2112.14911}
+    \item \url{https://marss-riscv-docs.readthedocs.io/en/latest/sections/branch-pred.html}
+    \item \url{https://ieeexplore.ieee.org/document/10150975}
+    \item \url{https://doi.org/10.1109/TC.1987.1676981}
+    \item \url{https://ieeexplore.ieee.org/abstract/document/888345}
+    \item \url{https://dl.acm.org/doi/10.1145/232974.232975}
+    \item \url{https://dl.acm.org/doi/10.1145/191995.192011}
+    \item \url{https://uccs.idm.oclc.org/login?url=https://www.proquest.com/dissertations-theses/hybrid-branch-prediction-method-integration/docview/305535160/se-2?accountid=25388}
+    \item \url{Branch predication using large self history}
+    \item \url{https://arxiv.org/abs/1906.08170v1}
+    \item \url{https://ieeexplore.ieee.org/abstract/document/6834760?casa_token=lHuqEKUMvOkAAAAA:xveFkDrIhIB1PzLmKiQk5MmMlblFmNzSpknsgQ5LQH08IL22HRKzy78neZVXIgbcIa900BGc1CnyaA}
+    \item \url{https://dl.acm.org/doi/10.1145/511120.511124}
+\end{enumerate}
+\subsection*{For Basic methods: }
+\begin{enumerate}
+    \item \url{https://ieeexplore.ieee.org/abstract/document/727254}
+    \item \url{https://link.springer.com/article/10.1007/s41870-021-00631-z?fromPaywallRec=true}
+    \item \url{https://dl.acm.org/doi/abs/10.1145/123465.123475}
+    \item \url{https://dl.acm.org/doi/abs/10.1145/146628.139709}
+    \item \url{https://www.sciencedirect.com/science/article/pii/S138376210300095X}
+    \item \url{https://dl.acm.org/doi/abs/10.1145/165123.165161}
+    \item \url{https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=3501e3787a267dd572fe06c3dc1c70a76dc9702b}
+    \item \url{https://ieeexplore.ieee.org/abstract/document/1541054}
+    \item \url{https://ieeexplore.ieee.org/abstract/document/9974891}
+    \item \url{https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=c85a9b143bb9fa34bf4a9fc3f336ca61f647f311}
+    \item \url{https://d1wqtxts1xzle7.cloudfront.net/78887653/422e4a907812c9735869cf4f89342b14f3d8-libre.pdf?1642341347=&response-content-disposition=inline%3B+filename%3DModified_Architectural_Support_to_Implem.pdf&Expires=1727823282&Signature=EtK3B1UvdxUFG25IxnjGC3HA~zLpxOEUSiFyahnf80pQxktg~LcPlxd6waV8oVkXn0shqXhZyHiXTJanQaG1Bm7CKqBLXTnvROo3ziOJu7iDuIUWh3oQG3oYZUF91Hz4k4Xa2ZohzHarXsc862iuYwhPi-nguaM2XNzN-QyHg94nBs-Y3XI~n5FAz0Y91jhSt6sioc-cuIJ1GM2jkyP00FKUcwAe2hRweoLU8vdXZ8gjpk15ByTiVOkIHNDAZEUxtsbKHZFXylaKQYEdtEyU2qQsnMQxtYLeHyTdlAxIeC2Y1O15DZ25SlqPL8U-pRYyUadRwXFsNFirA1l3Hx6~JA__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA}
+\end{enumerate}
+\subsection*{For Advanced methods: }
+\begin{enumerate}
+    \item \url{https://dl.acm.org/doi/abs/10.1145/2155620.2155635}
+    \item \url{https://inria.hal.science/hal-00639040/document}
+    \item \url{https://ieeexplore.ieee.org/abstract/document/5749750}
+    \item \url{https://inria.hal.science/hal-01354253/}
+    \item \url{https://inria.hal.science/hal-01086920/}
+    \item \url{https://ieeexplore.ieee.org/abstract/document/8906770}
+    \item \url{https://link.springer.com/article/10.1007/s13369-022-07593-9}
+    \item \url{https://docs.boom-core.org/en/latest/sections/branch-prediction/}
+    \item \url{https://ieeexplore.ieee.org/abstract/document/8906770}
+    \item \url{https://ieeexplore.ieee.org/abstract/document/903263}
+    \item \url{https://dl.acm.org/doi/abs/10.1145/1089008.1089011}
+    \item \url{https://dl.acm.org/doi/abs/10.1145/3307650.3322217}
+    \item \url{https://dl.acm.org/doi/abs/10.1145/571637.571639}
+\end{enumerate}
+\paragraph*{Note: }
+Each of these papers mentioned above have a detailed explanation of the specific branch prediction technique and also a comparison with basic techniques.
+I am yet to find more papers on Multiperspective Perceptron Branch-Prediction Technique. I was only able to find four of them for now.
+\section*{Summary of meeting with the professor: }
+My advisor is Dr.Bloom. 
+\begin{itemize}
+    \item He suggested me to pursue a novel approach to solving the problem of branch prediction, instead of trying to quantify the existing ones. 
+    \item He also said for a survey paper as a course outcome this idea would be sufficient.
+    \item He also suggested me to look into the \emph{gem5} simulator and understand how the branch prediction techniques are implemented in it.
+    \item I mentioned the benchmark I would like to use for this paper and he seemed ok with the idea as a whole. 
+\end{itemize}
+
 
 \end{document}
