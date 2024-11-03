@@ -5,6 +5,41 @@
 \author{Raja Katheti}
 \begin{document}
 \maketitle
+\section{Learnings from peer reviews}
+\begin{itemize}
+    \item I was able to apply the feedback and get the paper to resonante with the story I want to tell. 
+    \item I was able to get the paper to be more concise and to the point.
+    \item I was able to add some more details that would enhance each technique and also corrected the references.
+    \item I am looking into adding more inferences from the papers I read so that I can discusss them at length when appropriate. 
+\end{itemize}
+\section{Experimental CS:}
+I explain below how I want to able to incorporate the learnings from the class into my experimental setup.
+\begin{itemize}
+    \item I got to learn what metrics to chooose to align with the story. 
+    \item I want to be able to make meaningful deductions from those metrics.
+\end{itemize}
 
-
+Here is my current experimental setup:
+\begin{table}[ht]
+    \centering
+    \caption{Experimental Setup and Metrics}
+    \begin{tabular}{|p{4cm}|p{10cm}|} % chktex 44
+        \hline % chktex 44
+        \textbf{Component} & \textbf{Description} \\
+        \hline % chktex 44
+        Simulator & gem5 \\
+        \hline % chktex 44
+        Architecture & RISC-V core with out-of-order execution \\
+        \hline % chktex 44
+        Processor Model & Clock Speed: 2.5GHz, Cache Configuration: yet to decide, Branch Predictors: Local, BiMode, Tournament, L-TAGE, Multi-Perspective Perceptron \\
+        \hline % chktex 44
+        Benchmark Suite & SPEC CPU \\
+        \hline % chktex 44
+        Benchmarks Used & INT and FLOAT \\
+        \hline % chktex 44
+        Metrics & Prediction Accuracy, Misprediction Rate, Performance Improvement (IPC), Execution Time, Hardware Overhead (Area and Power) \\
+        \hline % chktex 44
+    \end{tabular}
+\end{table}
+I am looking into adding more metrics and decide on the cache configuaration where the experiment won't be biased on the spatial locality feature of the cache. 
 \end{document}
