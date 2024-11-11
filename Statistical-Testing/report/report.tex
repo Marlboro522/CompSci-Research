@@ -1,0 +1,115 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+
+\title{Statistical Testing}
+\author{Raja Kantheti}
+
+\begin{document}
+
+\maketitle
+\section{Methods}
+I performed independent t-tests and paired t-tests on the following columns: S, I, P, IP, SI, SP, SIP, SwL, IwL, and PwL. Independent t-tests were used to compare means between different datasets, while paired t-tests were used to compare means within paired samples from the datasets.
+
+\section{Results}
+
+\subsection{Independent T-Tests}
+The independent t-test results are summarized in Table\ref{tab:independent-ttests}. Significant results (p-value < 0.05) indicate that there is a significant difference in the means of the compared datasets.
+
+\begin{table}[ht!]
+\centering
+\begin{tabular}{lcccc}
+\toprule
+Column & Comparison & t-Statistic & p-value & Significant \\
+\midrule
+S   & u10 vs u25 & -3.014 & 0.004 & Yes \\
+    & u25 vs u50 & -1.404 & 0.167 & No \\
+    & u10 vs u50 & -4.695 & $2.61 \times 10^{-5}$ & Yes \\
+I   & u10 vs u25 & -3.272 & 0.002 & Yes \\
+    & u25 vs u50 & -0.095 & 0.925 & No \\
+    & u10 vs u50 & -3.298 & 0.002 & Yes \\
+P   & u10 vs u25 & -3.146 & 0.003 & Yes \\
+    & u25 vs u50 & -0.892 & 0.377 & No \\
+    & u10 vs u50 & -3.839 & 0.0004 & Yes \\
+IP  & u10 vs u25 & -4.990 & $9.44 \times 10^{-6}$ & Yes \\
+    & u25 vs u50 & -0.272 & 0.787 & No \\
+    & u10 vs u50 & -5.318 & $3.12 \times 10^{-6}$ & Yes \\
+SI  & u10 vs u25 & -4.399 & $6.11 \times 10^{-5}$ & Yes \\
+    & u25 vs u50 & 0.120  & 0.905 & No \\
+    & u10 vs u50 & -4.546 & $4.04 \times 10^{-5}$ & Yes \\
+SP  & u10 vs u25 & -4.625 & $3.20 \times 10^{-5}$ & Yes \\
+    & u25 vs u50 & 0.205  & 0.838 & No \\
+    & u10 vs u50 & -4.144 & 0.00014 & Yes \\
+SIP & u10 vs u25 & -4.543 & $3.82 \times 10^{-5}$ & Yes \\
+    & u25 vs u50 & -0.148 & 0.883 & No \\
+    & u10 vs u50 & -4.809 & $1.62 \times 10^{-5}$ & Yes \\
+SwL & u10 vs u25 & -0.439 & 0.662 & No \\
+    & u25 vs u50 & -0.578 & 0.566 & No \\
+    & u10 vs u50 & -0.945 & 0.350 & No \\
+IwL & u10 vs u25 & -0.735 & 0.466 & No \\
+    & u25 vs u50 & -0.759 & 0.452 & No \\
+    & u10 vs u50 & -1.404 & 0.167 & No \\
+PwL & u10 vs u25 & -2.440 & 0.018 & Yes \\
+    & u25 vs u50 & -0.946 & 0.349 & No \\
+    & u10 vs u50 & -3.485 & 0.0011 & Yes \\
+\bottomrule
+\end{tabular}
+\caption{Independent t-test results}\label{tab:independent-ttests}
+\end{table}
+
+\subsection{Paired T-Tests}
+The paired t-test results are summarized in Table\ref{tab:paired-ttests}. Significant results (p-value < 0.05) indicate that there is a significant difference in the means within the paired samples.
+
+\begin{table}[ht!]
+\centering
+\begin{tabular}{lcccc}
+\toprule
+Column & Comparison & t-Statistic & p-value & Significant \\
+\midrule
+S   & u10 vs u25 & -3.091 & 0.005 & Yes \\
+    & u25 vs u50 & -1.447 & 0.161 & No \\
+    & u10 vs u50 & -4.518 & $1.41 \times 10^{-4}$ & Yes \\
+I   & u10 vs u25 & -3.263 & 0.003 & Yes \\
+    & u25 vs u50 & -0.103 & 0.919 & No \\
+    & u10 vs u50 & -2.964 & 0.007 & Yes \\
+P   & u10 vs u25 & -3.210 & 0.004 & Yes \\
+    & u25 vs u50 & -0.944 & 0.354 & No \\
+    & u10 vs u50 & -5.600 & $9.19 \times 10^{-6}$ & Yes \\
+IP  & u10 vs u25 & -4.923 & $5.05 \times 10^{-5}$ & Yes \\
+    & u25 vs u50 & -0.333 & 0.742 & No \\
+    & u10 vs u50 & -5.933 & $4.02 \times 10^{-6}$ & Yes \\
+SI  & u10 vs u25 & -6.123 & $2.52 \times 10^{-6}$ & Yes \\
+    & u25 vs u50 & 0.127  & 0.900 & No \\
+    & u10 vs u50 & -4.055 & $4.58 \times 10^{-4}$ & Yes \\
+SP  & u10 vs u25 & -6.426 & $1.21 \times 10^{-6}$ & Yes \\
+    & u25 vs u50 & 0.215  & 0.832 & No \\
+    & u10 vs u50 & -4.002 & $5.24 \times 10^{-4}$ & Yes \\
+SIP & u10 vs u25 & -6.239 & $1.90 \times 10^{-6}$ & Yes \\
+    & u25 vs u50 & -0.161 & 0.874 & No \\
+    & u10 vs u50 & -5.017 & $3.99 \times 10^{-5}$ & Yes \\
+SwL & u10 vs u25 & -0.450 & 0.657 & No \\
+    & u25 vs u50 & -0.598 & 0.555 & No \\
+    & u10 vs u50 & -0.891 & 0.382 & No \\
+IwL & u10 vs u25 & -0.688 & 0.498 & No \\
+    & u25 vs u50 & -0.950 & 0.351 & No \\
+    & u10 vs u50 & -1.598 & 0.123 & No \\
+PwL & u10 vs u25 & -2.360 & 0.027 & Yes \\
+    & u25 vs u50 & -1.117 & 0.275 & No \\
+    & u10 vs u50 & -5.245 & $2.24 \times 10^{-5}$ & Yes \\
+\bottomrule
+\end{tabular}
+\caption{Paired t-test results}\label{tab:paired-ttests}
+\end{table}
+
+\section{MMy Interpretations: }
+The t-test results indicate several significant differences between the datasets. Notably:
+
+\begin{itemize}
+    \item For most columns (S, I, P, IP, SI, SP, SIP, and PwL), there are significant differences between \texttt{u10} and \texttt{u25}, as well as between \texttt{u10} and \texttt{u50}.
+    \item Comparisons between \texttt{u25} and \texttt{u50} generally show no significant differences, suggesting that these datasets are more similar to each other than to \texttt{u10}.
+    \item The columns SwL and IwL show no significant differences across all comparisons, indicating stability in these measures across datasets.
+\end{itemize}
+
+\end{document}
