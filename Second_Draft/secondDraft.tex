@@ -1,0 +1,245 @@
+\documentclass[10pt,journal,compsoc]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{geometry}
+\usepackage[hidelinks,colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+\title{A Survey of Branch Prediction Techniques on Out-of-Order Processors with RISC-V Core (SURGE)}
+\author{\IEEEauthorblockN{Raja Kantheti}\\
+\IEEEauthorblockA{\textit{University of Colorado at Colorado Springs}\\
+rkanthet@uccs.edu}
+}
+\maketitle
+\begin{abstract}
+    Branch prediction is a critical aspect of performance tuning in modern processors. 
+    The performance of a processor is highly dependent on the accuracy of the branch prediction.
+    This survey paper, provides an evaluation of the branch prediction techniques on O3 CPUs with RISC-V cores, with emphasis on their Strengths and Weakenesses and 
+    offers insight into their implementation complexity and hardware overhead.
+\end{abstract}
+\begin{IEEEkeywords}
+Branch Prediction, Computer Architecture, Performance, High Performance Computing.
+\end{IEEEkeywords}
+\section{Introduction}
+\IEEEPARstart{A}{s} the complexity in the workloads on the processors increases, the 
+need for efficient branch prediction techniques becomes more important. The system throughput is 
+highly dependent on the accuracy of the branch prediction. Branch mispredictions can cause control hazards 
+and incur penalties such as pipeline stalls until all the instructions in the pipeline are flushed which impacts
+the performance of the processor negatively. As micro architectures are becoming deeply pipelined, a need for an accurate branch prediction mechanism is essential.\cite{1003559}.
+
+This paper aims to study the below listed branch prediction techniques on out-of-order processors with RISC-V core:
+\begin{enumerate}
+    \item Local
+    \item L-TAGE
+    \item BiMODE
+    \item Tournament
+    \item TAGE-SC-L
+    \item Multi-Perspective Perceptron
+    \item Multi-Perspective Perceptron with TAGE
+\end{enumerate}
+Out-Of-Order CPU is a type of processor that allows the execution of instructions in an order that is different from the order in which they appear in the program.
+They basically segregate the instructions based on dependencies and executes the independent instructions rapidly. Almost all the modern processors are out-of-order processors.
+RISC-V is an open-source instruction set architecture (ISA) based on reduced instruction set computing (RISC) principles. It is a simple and clean ISA that is easy to understand and implement.
+The techniques discussed in this paper are as follows.
+
+
+The rest of the paper is organised as follows: Section~\ref{related} presents related research work on branch prediction. Section~\ref{branchPredictors} includes a detailed explanation on the branch prediction techniques simulated. 
+Section~\ref{experimentalSetup} the exprimental setup in gem5 simulator. Section~\ref{results} presents the results of the simulation. Section~\ref{conclusion} gives perspectives and concludes the paper. 
+
+\section{Background}\label{background}
+Here, I present a overview of branch predictors and their classification with respect past research.
+\subsection{Useful Terms and Concepts}
+\begin{itemize}
+    \item \textbf{Branch Prediction}: A technique used in processors to guess the direction of branch instructions (whether they will be taken or not) to improve instruction flow in pipelined architectures.
+    
+    \item \textbf{Misprediction}: The event when the processor incorrectly predicts the outcome of a branch instruction, leading to performance penalties such as pipeline stalls or flushes.
+    
+    \item \textbf{Static Prediction}: A branch prediction method that relies on fixed heuristics, determined at compile time, rather than runtime behavior. Common strategies include using the direction of the branch (e.g., forward branches are likely taken).
+    
+    \item \textbf{Dynamic Prediction}: A more sophisticated prediction method that utilizes historical information from previous branch executions to inform future predictions. This can be achieved through global history, local history, or hybrid approaches.
+    
+    \item \textbf{Global History Buffer (GHB)}: A structure that maintains a record of the outcomes of recent branches to improve the accuracy of dynamic predictions.
+    
+    \item \textbf{Local History Buffer}: A mechanism that stores the behavior of individual branches to make predictions based on their unique patterns.
+        
+    \item \textbf{Reorder Buffer (ROB)}: A crucial component in out-of-order processors that allows instructions to complete in a different order than they were issued, helping to maintain the correct program order at the time of writing results back to the register file.
+    
+    \item \textbf{Instruction-Level Parallelism (ILP)}: The ability to execute multiple instructions simultaneously within a processor, which can be enhanced through effective branch prediction techniques.
+    
+    \item \textbf{Hardware Overhead}: Refers to the additional area, power, and complexity that branch prediction techniques introduce into a processor architecture, impacting design trade-offs.
+    
+    \item \textbf{Speculative Execution}: A performance optimization technique where the processor executes instructions before it is known whether they are needed, often based on branch predictions, to reduce idle cycles.
+    
+    \item \textbf{Performance Metrics}: Metrics such as prediction accuracy, misprediction rate, and throughput that evaluate the effectiveness of branch prediction strategies.
+    
+    \item \textbf{gem5 Simulator}: An open-source simulator used for computer architecture research, which can model various aspects of processors, including branch prediction techniques in RISC-V architectures.\cite{lowepower2020gem5simulatorversion200}
+\end{itemize}
+\subsection{Classification}
+The table below represents the specific research on the respective branch prediction techniques.
+It is to be noted that the references are not exhaustive and are only indicative of the research conducted on the respective branch predictors.
+All the researfch cited in this paper has mentions, opinions, and Quantifiable data on, if not all, atleast 4 of the branch predictors.
+\begin{center}
+\begin{tabular}{c c}
+    \textbf{Predictor} & \textbf{References} \\
+    Local & \textit{Nearly all}\\
+    Tournament & \textit{Nearly all}\\
+    BiMODE &\cite{nainImplementationComparisonBimodal2021}\\
+    L-TAGE &\cite{matsuiEfficientImplementationTAGE2019,seznecStorageFreeConfidence2011,seznec64KbytesISLTAGE,seznecNewCaseTAGE2011}\\
+    TAGE-SC-L &\cite{linBranchPredictionNot2019a,seznecTAGESCBranchPredictorsAgain2016,seznecTAGESCBranchPredictors2014}\\
+    Multi-Perspective Perceptron &\cite{jimenezDynamicBranchPrediction2001,tarjanMergingPathGshare2005,garzaBitlevelPerceptronPrediction2019,josephSurveyDeepLearning2021a,jimenezNeuralMethodsDynamic2002,dangBATAGEBFNPHighPerformanceHybrid2023,multi1}\\
+    Multi-Perspective \\Perceptron with TAGE &\cite{jimenezDynamicBranchPrediction2001,tarjanMergingPathGshare2005,garzaBitlevelPerceptronPrediction2019,josephSurveyDeepLearning2021a,jimenezNeuralMethodsDynamic2002,dangBATAGEBFNPHighPerformanceHybrid2023,multi1}\\
+\end{tabular}
+\end{center}
+\section{Related Research}\label{related}
+
+A review of several dynamic BP systems, such as gshare, two-level BPs, Smith BP, and perceptron, is presented by Sparsh M.\cite{mittalSurveyTechniquesDynamic2018}. 
+For the majority of the applications employed, it is evident that the perceptron BP has the highest precision.
+
+The OoO cpu model in gem5 is modelled as follows. Its pipeline stages are fetch, decode, rename, and retirement. 
+The instruction issue, dispatch, and execute stages are carried out out-of-order in an OoO pipeline (Power et al.\cite{lowepower2020gem5simulatorversion200}). 
+The branch prediction unit is handled by the OoO pipeline's fetch step. The pipeline's decode stage handles unconditional branches, whose branch target is unavailable, and the execute stage finds the conditional branch mispredictions. 
+The program counter (PC) is updated whenever a branch misprediction is detected, the pipeline is squashed as a whole, and the entry is removed from the branch target buffer (BTB). 
+
+A comparison of several BPs, such as the bimodal, gshare, YAGs, and meta-predictor, 
+is presented by Kotha A\cite{kothaComparativeStudyBranch}. The JPEG Encoder, G721 Speech Encoder, Mpeg Decoder, and Mpeg 
+Encoder apps are used to assess the BPs' performance. For certain applications, YAGS Neo, a new BP, 
+performs better than the others. The meta predictor presented in the research, 
+which combines different predictor combinations, performs better than the others.
+
+
+\section{Branch Predictors}\label{branchPredictors}
+
+\subsection{Local}
+\noindent The local branch predictor is a simple branch predictor that uses a table of 2-bit saturating counters to predict the outcome of a branch.
+
+Modern processors have specialised mechanisms called local branch predictors that use the past performance of particular branch instructions to improve branch prediction accuracy. 
+
+The predictors employ a Local History Table (LHT) to save the results of branches that are taken and those that are not. 
+Because every entry in the LHT relates to a particular branch instruction, the predictor can efficiently catch distinct patterns. 
+
+The LHT's output is sent into a Pattern History Table (PHT), which makes predictions about the branch's future occurrences using saturating counters. Local predictors can achieve good prediction accuracy with this architecture, especially for branches with unique behaviours.
+Though they typically use less storage than global predictors, they still have some overhead, and they can have trouble with branches that exhibit inconsistent patterns impacted by program input or state. 
+
+A local branch predictor associates a branch history register with a branch. The register stores the outcomes of the last executions of the corresponding branch, and this information is used to predict the outcome of the branch the next time it is executed. The branch history register may be combined with the program counter and mapped by a table of 2-bit counters onto a prediction\cite{hoogerbruggeDynamicBranchPrediction2000a}
+Local branch predictors are effective when the outcome of a branch is strongly correlated with its own past behavior, but they are not as effective when the outcome of a branch is correlated with the outcomes of other branches. They can also struggle to predict loop exits when the loop count is higher than the local history size\cite{mittalSurveyTechniquesDynamic2018}
+Because local branch predictors reduce misprediction-related execution pauses, they play a critical role in improving out-of-order processor efficiency. To increase overall prediction accuracy, they are frequently used in conjunction with global predictors or tournament predictors.\cite{mittalSurveyTechniquesDynamic2018}
+\subsection{L-TAGE}
+\noindent In order to attain more accuracy in forecasting branch outcomes, L-TAGE (Local TAGE) is an enhanced branch prediction technique that expands upon the ideas of both local and global prediction strategies. It tracks both local and global history at the same time by using a hybrid technique that involves keeping numerous tables. L-TAGE combines the advantages of global history tracking—which takes into account more extensive execution patterns—with local history tables, which may effectively record the unique behaviours of individual branches. When compared to typical local or global predictors alone, L-TAGE's accuracy is improved due to its ability to adapt to a wide range of branching behaviours according to this dual approach.
+
+Using numerous Pattern History Tables (PHTs) to optimise prediction for different sorts of branches by utilising varying historical lengths is one of L-TAGE's primary characteristics. To make sure that each branch instruction uses the most pertinent previous data, the predictor uses a tagging method. Because of this, L-TAGE is able to manage complicated branch behaviours, such as correlated branches, in which the course of one branch may influence the course of other branches.
+
+Modern out-of-order processors can incorporate L-TAGE because of its ability to maximise prediction accuracy and save hardware overhead. It successfully strikes a trade-off between performance and complexity, which is crucial in high-performance computing settings where each cycle matters.
+The L-TAGE (Loop-TAGE) branch predictor is a variant of the TAGE predictor that augments it with a loop predictor. The loop predictor is used to predict the outcome of loop branches, which are often difficult for TAGE to predict accurately.
+
+The loop predictor in L-TAGE operates by keeping track of the number of iterations that have been executed for each loop. When a loop branch is encountered, the loop predictor checks to see if it has seen this loop before. If it has, it predicts the outcome of the branch based on the number of iterations that have been executed. If it has not, it predicts the branch as taken.\cite{seznec64KbytesISLTAGE}
+The L-TAGE predictor is more accurate than the TAGE predictor alone, especially for benchmarks with many loops.
+To sum up, L-TAGE is a major breakthrough in branch prediction technology that offers a reliable way to improve processor performance through precise branch outcome prediction. Examine pertinent literature that covers its architecture and performance reviews for additional insights.
+\subsection{BiMODE}
+\noindent The Bi-Mode Predictor is a branch prediction method that improves prediction accuracy by utilising two different prediction modes. The two main parts of this strategy are a global predictor that takes into account the branches' larger execution context and a local predictor that monitors the history of individual branches. The Bi-Mode Predictor is especially useful in a variety of settings since it can adjust to different branching behaviour patterns by using both local and global history.
+
+The local predictor in the Bi-Mode Predictor architecture usually uses a local history table (LHT) to store the historical results of certain branch instructions. In the meantime, the global predictor records the recent actions of several branches using a global history registry (GHR). The decision-making process of the Bi-Mode technique is crucial. Upon encountering a branch instruction, the predictor has the option to employ the local or global prediction, depending on which mode is anticipated to produce a more precise outcome for that particular branch.
+
+The Bi-Mode Predictor's ability to manage the trade-offs between accuracy and hardware complexity is one of its main features. It can outperform conventional single-mode predictors, like solely local or purely global predictors, in terms of accuracy while keeping hardware overhead to a minimum by combining two modes of prediction. Because of this feature, the Bi-Mode Predictor is especially well-suited for out-of-order processors, where it's crucial to maintain a high instruction throughput.
+
+Studies show that when compared to less complex prediction methods, Bi-Mode Predictors can dramatically lower branch misprediction rates, improving processor performance overall. The approach remains relevant in the design of contemporary high-performance computing systems due to its efficiency and versatility. You can read up on the architecture and performance assessments of the Bi-Mode Predictor in greater depth in the literature.
+The Bi-Mode branch predictor improves prediction accuracy by dividing the level-2 counter table into two parts: a taken direction predictor and a not-taken direction predictor.
+For each history pattern, a counter is chosen from each direction predictor, and a choice predictor, which is only indexed by the branch address, selects one of the two counters to make the prediction. The choice predictor classifies global history patterns into two groups based on the per-address bias stored in the choice predictor table.
+The Bi-Mode predictor updates using a partial-update policy. Only the final counter selected to make the prediction is updated based on the branch result. However, the choice predictor is always updated unless its prediction is opposite of the branch outcome, but the prediction of the selected counter is correct.\cite{mittalSurveyTechniquesDynamic2018}
+\subsection{Tournament} 
+\noindent A sophisticated branch prediction method called the Tournament Predictor was created to improve branch outcome predictions on contemporary CPUs. Through a competitive selection procedure, this strategy combines the capabilities of both local and global predictors. The Tournament Predictor's main concept is to use several predictors and dynamically select the best one based on how well it has performed in the past for a particular branch instruction.
+
+This architecture combines a ``tournament'' selection process with one or more predictors, usually a local predictor and a global predictor. Every predictor keeps track of its own prediction algorithms and history tables. The Tournament Predictor evaluates each of its component predictors' predictions when it encounters a branch instruction. The final prediction is made by the predictor who has previously shown the highest accuracy for branches that are comparable to it.
+
+The Tournament Predictor's versatility is one of its main benefits. The Tournament Predictor is particularly helpful in complex applications where the behaviour of branch instructions might vary greatly, as it can handle a wide range of branching behaviours by utilising numerous prediction algorithms and choosing the best-performing one. This dynamic technique maximises processor performance by reducing the penalty linked to incorrect predictions and increasing prediction accuracy.
+
+The meta-predictor table is indexed by the lower order bits of the branch address. Each entry in the table has 2 bits, indicating which of the component predictors to use for that branch.
+
+The meta-predictor table is updated every time a prediction is made. If the prediction made by the selected component predictor is incorrect, the 2-bit entry in the meta-predictor table is updated to select the other predictor the next time that branch is encountered.
+Tournament predictors can achieve higher prediction accuracy because different component predictors may be better at predicting different types of branches. However, they can also be more complex and expensive to implement than simpler predictors.\cite{kothaComparativeStudyBranch}
+
+Tournament Predictor performs better than a lot of conventional prediction techniques, especially in settings with a lot of branch variability. It is an important tool in the design of high-performance computing systems and out-of-order processors because of its flexibility in responding to shifting patterns. Consult the literature on the Tournament Predictor's performance comparisons and implementation techniques for a more thorough grasp of its architecture and efficacy.
+\subsection{TAGE-SC-L}
+\noindent
+The TAGE-SC-L predictor consists of three components: a TAGE predictor, a statistical corrector (SC) predictor, and a loop predictor (L). The TAGE predictor serves as the primary predictor. Its prediction is then evaluated by the statistical corrector predictor, which can confirm or reverse the prediction based on similar historical circumstances. The statistical corrector reverses the TAGE prediction when it statistically appears that TAGE would make a misprediction. The loop predictor improves the prediction accuracy of loops with long loop bodies, which can be difficult for TAGE to predict accurately.\cite{seznecTAGESCBranchPredictors2014,seznecTAGESCBranchPredictorsAgain2016}
+
+TAGE predictors are very efficient at predicting very correlated branches even if the correlation spans a history of thousands of branches.\cite{seznecNewCaseTAGE2011}
+
+The Statistical Corrector predictor aims at detecting unlikely predictions and reversing them.\cite{seznecTAGESCBranchPredictors2014,seznecTAGESCBranchPredictorsAgain2016,seznec64KbytesISLTAGE} The statistical corrector predictor receives the prediction from the TAGE predictor as well as the address, global history, global path, and local history.\cite{seznecTAGESCBranchPredictorsAgain2016} It then decides whether to keep or reverse the prediction. The statistical corrector can be small because in most cases, the TAGE predictor provides a correct prediction.\cite{seznec64KbytesISLTAGE,seznecTAGESCBranchPredictorsAgain2016}
+
+The loop predictor is helpful in predicting regular loops with long loop bodies. The loop predictor reduces the misprediction rate by approximately 0.3\%\cite{seznecTAGESCBranchPredictors2014,seznecTAGESCBranchPredictorsAgain2016}
+\subsection{Multi-Perspective Perceptron}
+\noindent The Perceptron Predictor assigns weights to each element in the branch history, and predicts the branch outcome based on the dot product of the weights and the branch history, plus a bias weight to represent the branch's overall tendency.\cite{tarjanMergingPathGshare2005}. 
+The multi-perspective perceptron (MPP) branch predictor uses a set of 37 features derived from the branch address and a global history of branch outcomes to index into a table of perceptrons.\cite{multi1}This differs from the global perceptron branch predictor described in source, which uses the global branch history to index into the table. Each perceptron maintains a weight for each of its features. The output of the perceptron is the weighted sum of its features. The predictor uses this output to predict the outcome of a branch.
+\subsection{Multi-Perspective Perceptron with TAGE}
+\noindent
+% citations scope for number 38 and,39,14,
+yet to learn. 
+
+
+\section{Experimental Setup}\label{experimentalSetup}
+The experiment was conducted on RISC-V core by disabling the default branch prediction which is named BOOM\cite{BranchPredictionRISCVBOOMa}.
+
+The Branch Prediction Unit (BPU) in the RISC-V Boom processor is configurable. It can use either a simple bimodal predictor or a complex 2-level adaptive predictor, such as GShare, GSelect, GAg, GAp, PAg, or PAp.
+The BPU includes the following components:
+Branch Target Buffer (BTB): The BTB is modeled as a set-associative data structure, which can use either random eviction or bit PLRU as its eviction policy.
+Branch History Table (BHT): A separate BHT stores prediction bits for simple bi-modal predictors.
+Return Address Stack (RAS) (Optional): The RAS tracks the last N function return addresses, where N is the number of entries in the RAS.If a decoded instruction is a function call, the return address is pushed onto the RAS from the decode pipeline stage. If the decoded instruction is a function return, the address is popped from the RAS and forwarded to the fetch stage.\cite{BranchPredictionRISCVBOOMa,BranchPredictionUnita}
+
+The experiments were conducted using the gem5 simulator, which is a cycle-accurate simulator for computer architecture research.\cite{lowepower2020gem5simulatorversion200}
+The gem5 simulator was used to model an out-of-order processor with a RISC-V core, which is a common architecture for high-performance computing systems.
+The branch prediction techniques were implemented in the simulator to evaluate their performance in terms of prediction accuracy, misprediction rate, and throughput.
+
+Branch prediction plays a crucial role in modern processors by determining the outcome of conditional branch instructions before they are fully evaluated. This allows the processor's pipeline to fetch and execute instructions speculatively, improving throughput and reducing idle cycles. The effectiveness of branch prediction directly impacts how efficiently the processor handles control flow, especially in situations where there are frequent branch instructions. By predicting branches ahead of time, the processor can maintain a steady flow of instructions, reducing the time spent waiting for branches to be resolved and minimizing pipeline stalls.\cite{1003559}
+
+Control hazards occur when a branch instruction forces the processor to decide which instruction to fetch next. If the branch predictor incorrectly guesses the outcome, the processor must flush the pipeline and restart execution, resulting in wasted cycles and performance degradation. Efficient branch predictors help mitigate these issues by accurately predicting the outcome of branches, ensuring that the processor spends less time dealing with mispredictions. The ability of a branch predictor to minimize pipeline flushes and reduce the impact of control hazards is crucial for maintaining high performance, particularly in high-performance or real-time computing environments.\cite{matsuiEfficientImplementationTAGE2019,calderFastAccurateInstruction1994a,choudhuryOptimizedRISCVProcessor2022,heSurveyComparisonPipeline2023a,emmaCharacterizationBranchData1987a}
+
+gem5 provides a flexible and detailed simulation environment, allowing researchers to experiment with various CPU and memory configurations without needing physical hardware. This flexibility enables researchers to simulate numerous branch prediction strategies and evaluate their performance under different workloads. For example, some strategies may excel when branches are highly predictable, while others may perform better in more complex scenarios with unpredictable branching patterns. Researchers can also study the trade-offs between the efficiency of different branch prediction techniques, considering factors such as power consumption, hardware complexity, and the effectiveness of minimizing mispredictions and pipeline flushes.
+\begin{table}[h]
+    \centering
+    \caption{Experimental Setup and Metrics}
+    \begin{tabular}{| >{\centering\arraybackslash}m{2cm}| >{\centering\arraybackslash}m{4cm}|}
+        \hline
+        \textbf{Component} & \textbf{Description} \\
+        \hline
+        \textbf{Simulator} & gem5 \\
+        \hline
+        \textbf{Architecture} & RISC-V core with out-of-order execution \\
+        \hline
+        \textbf{Branch Prediction Techniques} & Local, BiMode, Tournament, L-TAGE, Multi-Perspective Perceptron \\
+        \hline
+        \textbf{Benchmarks} & SPEC CPU (Int17 and Float17) benchmarks for validation \\
+        \hline
+        \textbf{Metrics} & \begin{itemize}
+            \item Prediction Accuracy
+            \item Misprediction Rate
+            \item Performance Improvement (IPC)
+            \item \raggedright{}Hardware Overhead (Area and Power)
+        \end{itemize} \\
+        \hline
+        \textbf{Analysis Tools} & Statistical analysis tools for data interpretation \\
+        \hline
+    \end{tabular}
+\end{table}
+
+
+\section{Workload}\label{workload}
+\noindent Your branch prediction experiment is crucial to the SPEC CPU 2017 benchmarks, which include SPECint2017 for integer workloads and SPECfp2017 for floating-point workloads. These benchmarks include a wide range of real-world applications that heavily rely on conditional branches, including sorting, data processing, scientific simulations, and numerical solvers. The efficiency with which these activities are completed depends critically on how well a processor's branch prediction system works. Pipeline flushes occur when the processor guesses a branch erroneously, which lowers performance. You can evaluate how effectively different predictors handle control flow and reduce mispredictions in intricate, realistic workloads by comparing these benchmarks with various branch prediction algorithms.
+
+However, SPECfp2017 puts a lsot of strain on the processor through activities that need a lot of floating points, like numerical simulations and matrix calculations, which also frequently involve branches. However, they are frequently less predictable because these branches rely on the outcomes of floating-point calculations, which could bring more intricate, non-linear control flow. You may evaluate how well various predictors manage these more erratic branching patterns by executing SPECfp2017 benchmarks in your branch prediction experiment. This sheds light on the branch prediction techniques' capacity to sustain high performance in computationally demanding settings where prediction accuracy and execution efficiency are critical, such as scientific computing and financial modeling.
+
+In conclusion, a realistic and thorough test suite for assessing branch prediction techniques is provided by the SPEC CPU 2017 benchmarks. By simulating integer and floating-point workloads, these benchmarks demonstrate the difficulties branch predictors encounter in practical settings. By using these benchmarks in your experiment, you can learn how various branch prediction methods handle intricate control flow patterns, which will help you optimize CPU architecture for both general-purpose and specialized computing jobs.
+\section{Experiment Results}\label{results}
+
+\section{Perspectives and Conclusion}\label{conclusion}
+
+\nocite*{}
+\bibliographystyle{IEEEtran}
+\bibliography{first_draft.bib}
+\end{document}
