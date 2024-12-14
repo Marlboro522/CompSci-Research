@@ -1,0 +1,64 @@
+This is BibTeX, Version 0.99d (TeX Live 2022)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: survey_paper.aux
+The style file: IEEEtran.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: first_draft.bib
+Warning--I didn't find a database entry for "seznecPerceptronBranchPredictor2001"
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in seznec64KbytesISLTAGE
+Warning--empty year in seznec64KbytesISLTAGE
+Warning--empty booktitle in seznecTAGESCBranchPredictorsAgain2016
+Warning--empty booktitle in seznecTAGESCBranchPredictors2014
+Warning--empty journal in kothaComparativeStudyBranch
+Warning--empty year in kothaComparativeStudyBranch
+
+Done.
+You've used 28 entries,
+            4087 wiz_defined-function locations,
+            1016 strings with 15723 characters,
+and the built_in function-call counts, 21737 in all, are:
+= -- 1635
+> -- 618
+< -- 141
++ -- 336
+- -- 127
+* -- 1136
+:= -- 3232
+add.period$ -- 59
+call.type$ -- 28
+change.case$ -- 36
+chr.to.int$ -- 348
+cite$ -- 34
+duplicate$ -- 1527
+empty$ -- 1778
+format.name$ -- 136
+if$ -- 4992
+int.to.chr$ -- 0
+int.to.str$ -- 28
+missing$ -- 322
+newline$ -- 157
+num.names$ -- 25
+pop$ -- 842
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 1587
+stack$ -- 0
+substring$ -- 871
+swap$ -- 1225
+text.length$ -- 25
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 28
+warning$ -- 6
+while$ -- 84
+width$ -- 30
+write$ -- 336
+(There were 7 warnings)

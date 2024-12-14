@@ -1,0 +1,23 @@
+58325e2 Wasted_Marl (2024-11-18): Second Draft
+e0e76da Wasted_Marl (2024-11-10): statistical-testing
+1dc5df7 Wasted_Marl (2024-11-03): journal8
+030bdde Wasted_Marl (2024-10-31): just some blahs
+7017c50 Wasted_Marl (2024-10-27): Journal7
+eb3ba10 Wasted_Marl (2024-10-17): first_draft
+6156141 Wasted_Marl (2024-10-15): Git assignment
+4538dc0 Wasted_Marl (2024-10-13): Homework#2
+7e2092d Wasted_Marl (2024-10-06): Journal5
+4e9ebf6 Wasted_Marl (2024-10-04): Journal5
+e9efdc7 Wasted_Marl (2024-10-01): Homework#2
+3787a64 Wasted_Marl (2024-09-25): Homework#2
+c048fea Wasted_Marl (2024-09-15): Journal3 draft
+dbafc72 Wasted_Marl (2024-09-15): Journal3 draft
+ea624c2 Wasted_Marl (2024-09-14): Journal 3
+c03035d Wasted_Marl (2024-09-11): Journal#3
+1109709 Wasted_Marl (2024-09-08): Journal2
+a6ed225 Wasted_Marl (2024-09-08): Journal2
+0f4a7a0 Wasted_Marl (2024-09-07): Journal2
+e7b7df8 Wasted_Marl (2024-09-01): Journal 1
+2a50e8d Wasted_Marl (2024-09-01): Journal 1
+c4f0548 Wasted_Marl (2024-09-01): Initial Commit
+560ac5b Wasted_Marl (2024-09-01): first commit
